@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-<!-- FontAwesome pou bèl Logo ak Ikòn Reyèl -->
+<!-- FontAwesome pou Logo ak Ikòn Reyèl -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 <style>
@@ -23,7 +23,7 @@
   --muted:#8888A8;
   --accent:#7B5EA7;
   --accent2:#3ECFCF;
-  --natcash:#E1261C; /* Koulè Natcash */
+  --natcash:#E1261C;
   --radius:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -139,6 +139,8 @@ nav{
   margin:0 auto 2.5rem;line-height:1.7;
 }
 .hero-btns{position:relative;z-index:1;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;}
+
+/* ===== BUTTONS ===== */
 .btn-primary{
   padding:1rem 2.5rem;
   background:linear-gradient(135deg,var(--gold),#A87830);
@@ -170,7 +172,7 @@ section{padding:6rem 2rem; position: relative;}
 }
 .section-sub{color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7;font-size:1.05rem;}
 
-/* ===== SHOP & PACKAGES ===== */
+/* ===== SHOP ===== */
 #shop{background:var(--dark2);}
 .shop-tabs{display:flex;gap:.8rem;justify-content:center;margin-bottom:3rem;flex-wrap:wrap;}
 .shop-tab{
@@ -183,7 +185,6 @@ section{padding:6rem 2rem; position: relative;}
   background:var(--gold);color:#0A0A0F;border-color:var(--gold);
 }
 
-/* WhatsApp Link Cards */
 .wha-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
   gap:2rem;max-width:1200px;margin:0 auto;
@@ -211,7 +212,7 @@ section{padding:6rem 2rem; position: relative;}
 }
 .wha-buy:hover{background:#128c7e;}
 
-/* Social Boost Platform Grid */
+/* Viziblite Sosyal Grid */
 .platform-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:2rem;max-width:1200px;margin:0 auto;
@@ -365,7 +366,7 @@ section{padding:6rem 2rem; position: relative;}
 .contact-info h4{font-size:1.1rem;font-weight:700;margin-bottom:.2rem;}
 .contact-info p{color:var(--muted);font-size:.88rem;}
 
-/* SUPPORT FORM SURV */
+/* Sijè Sipò Survey Form */
 .support-form{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--radius);padding:2.5rem 2rem;
@@ -414,7 +415,7 @@ footer{
 .footer-links a:hover{color:var(--gold);}
 .footer-copy{color:var(--muted);font-size:.85rem;}
 
-/* ===== SMART MODAL OVERLAY (CHECKOUT SYSTEM) ===== */
+/* ===== SITEM PEMAN (MODAL) ===== */
 .modal-overlay{
   position:fixed;inset:0;background:rgba(0,0,0,0.8);
   z-index:5000;display:none;align-items:center;justify-content:center;
@@ -435,7 +436,7 @@ footer{
 .modal-close:hover{color:var(--text);background:var(--border);}
 .modal-title{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:1rem;}
 
-/* NATCASH SCREEN STYLES */
+/* NATCASH DESIGN SCREEN */
 #natcash-checkout-view{display:none;}
 .natcash-header{
   background:var(--natcash);color:#fff;border-radius:12px;
@@ -453,7 +454,7 @@ footer{
 .natcash-number{font-family:'Space Mono',monospace;font-size:1.6rem;color:#ff5252;font-weight:700;}
 .alert-warning-nat{color:#ffcc00;font-size:0.85rem;margin-top:0.5rem;display:block;}
 
-/* RESPONSIVE */
+/* RESPONSIVE DESIGN */
 @media(max-width:900px){
   .support-layout{grid-template-columns:1fr;}
   .nav-links{display:none;}
@@ -469,7 +470,7 @@ footer{
 </head>
 <body>
 
-<!-- ===== CHWAZI LANG ===== -->
+<!-- ===== SELECT LANG SCREEN ===== -->
 <div id="lang-screen">
   <div class="hero-bg" style="pointer-events:none;"></div>
   <h1>G-Legacy</h1>
@@ -483,7 +484,7 @@ footer{
 
 <div id="main-site">
 
-<!-- NAV -->
+<!-- NAV BAR -->
 <nav>
   <div class="nav-logo" onclick="scrollTo('home')">G-Legacy</div>
   <div class="nav-links">
@@ -499,6 +500,7 @@ footer{
     <span></span><span></span><span></span>
   </button>
 </nav>
+
 <div class="mobile-nav" id="mobileNav">
   <a onclick="scrollTo('shop');closeMobileNav()" data-i18n="nav_shop">Shop</a>
   <a onclick="scrollTo('courses');closeMobileNav()" data-i18n="nav_courses">Kours</a>
@@ -506,7 +508,7 @@ footer{
   <a onclick="scrollTo('support');closeMobileNav()" data-i18n="nav_support">Sipò</a>
 </div>
 
-<!-- HERO -->
+<!-- HERO BANNER -->
 <section id="home">
   <div class="hero-bg"></div>
   <div class="hero-tag" data-i18n="hero_tag">✦ Platfòm Nimewo 1 an Ayiti</div>
@@ -518,7 +520,7 @@ footer{
   </div>
 </section>
 
-<!-- ===== SHOP ===== -->
+<!-- ===== SECTION SHOP ===== -->
 <section id="shop">
   <div class="section-header">
     <div class="section-tag" data-i18n="shop_tag">🛍 Shop</div>
@@ -530,7 +532,7 @@ footer{
     <button class="shop-tab" onclick="showShopTab('visibility',this)" data-i18n="tab_vis">📈 Viziblite Sosyal</button>
   </div>
 
-  <!-- WhatsApp Links -->
+  <!-- Tab Chèn WhatsApp -->
   <div id="tab-whatsapp" class="wha-grid">
     <div class="wha-card">
       <div class="wha-img-banner"><i class="fa-brands fa-whatsapp"></i></div>
@@ -567,7 +569,7 @@ footer{
     </div>
   </div>
 
-  <!-- Visibility (REEL LOGOS ENTEGRE) -->
+  <!-- Tab Viziblite Sosyal -->
   <div id="tab-visibility" style="display:none;">
     <div class="platform-grid">
       <!-- TikTok -->
@@ -626,7 +628,7 @@ footer{
   </div>
 </section>
 
-<!-- ===== COURSES (MODERN AVATARS/CARDS) ===== -->
+<!-- ===== SECTION KOURS ===== -->
 <section id="courses">
   <div class="section-header">
     <div class="section-tag" data-i18n="courses_tag">🎓 Kours Anliy</div>
@@ -634,7 +636,6 @@ footer{
     <p class="section-sub" data-i18n="courses_sub">Kous detaye ak ekspè pou ede w fòme tèt ou, kreye pwodwi pwòp ou epi fè lajan.</p>
   </div>
   <div class="courses-grid">
-    <!-- Course 1 -->
     <div class="course-card">
       <div class="course-img-box c1"><div class="course-avatar"><i class="fa-solid fa-palette"></i></div></div>
       <div class="course-body">
@@ -647,7 +648,6 @@ footer{
         </div>
       </div>
     </div>
-    <!-- Course 2 -->
     <div class="course-card">
       <div class="course-img-box c2"><div class="course-avatar"><i class="fa-solid fa-mobile-screen-button"></i></div></div>
       <div class="course-body">
@@ -660,7 +660,6 @@ footer{
         </div>
       </div>
     </div>
-    <!-- Course 3 -->
     <div class="course-card">
       <div class="course-img-box c3"><div class="course-avatar"><i class="fa-solid fa-soap"></i></div></div>
       <div class="course-body">
@@ -673,7 +672,6 @@ footer{
         </div>
       </div>
     </div>
-    <!-- Course 4 -->
     <div class="course-card">
       <div class="course-img-box c4"><div class="course-avatar"><i class="fa-solid fa-jar-wheat"></i></div></div>
       <div class="course-body">
@@ -686,7 +684,6 @@ footer{
         </div>
       </div>
     </div>
-    <!-- Course 5 -->
     <div class="course-card">
       <div class="course-img-box c5"><div class="course-avatar"><i class="fa-solid fa-sparkles"></i></div></div>
       <div class="course-body">
@@ -699,7 +696,6 @@ footer{
         </div>
       </div>
     </div>
-    <!-- Course 6 -->
     <div class="course-card">
       <div class="course-img-box c6"><div class="course-avatar"><i class="fa-solid fa-bottle-droplet"></i></div></div>
       <div class="course-body">
@@ -715,7 +711,7 @@ footer{
   </div>
 </section>
 
-<!-- ===== WEBSITE BUILDER ===== -->
+<!-- ===== SECTION KREYASYON SITE ===== -->
 <section id="builder">
   <div class="section-header">
     <div class="section-tag" data-i18n="builder_tag">🌐 Kreyasyon Site Web</div>
@@ -759,7 +755,7 @@ footer{
   </div>
 </section>
 
-<!-- ===== SUPPORT ===== -->
+<!-- ===== SECTION SIPÒ ===== -->
 <section id="support">
   <div class="section-header">
     <div class="section-tag" data-i18n="support_tag">💬 Sipò & Kontak</div>
@@ -796,7 +792,7 @@ footer{
       </div>
     </div>
 
-    <!-- Support Form Survey -->
+    <!-- Sondaj ak Mesaj fòm nan -->
     <div class="support-right">
       <div class="support-form">
         <h3 data-i18n="form_title">✉️ Ekri Yon Mesaj</h3>
@@ -869,12 +865,12 @@ footer{
 
 </div>
 
-<!-- ===== MODAL BIZNIS KÒMAND AK PEMAN NATCASH ===== -->
+<!-- ===== SITEM MODAL KÒMAND + SÈVIS NATCASH ===== -->
 <div class="modal-overlay" id="purchaseModal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
     
-    <!-- VIEW 1: ENFÒMASYON KLIYAN -->
+    <!-- ETAP 1: RANFLI ENFÒMASYON -->
     <div id="info-order-view">
       <div class="modal-title" id="modal-title">Kòmande</div>
       <div class="modal-form">
@@ -895,12 +891,12 @@ footer{
           <span id="modal-price" style="font-family:'Space Mono';color:var(--gold);font-size:1.4rem;font-weight:700;margin-left:.5rem;"></span>
         </div>
         <button class="modal-submit" onclick="goToNatcashView()" style="width:100%; padding:1rem; background:linear-gradient(135deg,var(--gold),#A87830); color:#0A0A0F; border:none; border-radius:10px; font-weight:700; font-size:1rem; cursor:pointer;">
-          Proceed to Payment (Natcash) →
+          Kontinye sou Peman Natcash →
         </button>
       </div>
     </div>
 
-    <!-- VIEW 2: PAJ PEMAN NATCASH REYÈL (KORÈK ANNDAN SÈVÈ A) -->
+    <!-- ETAP 2: INTEGRASYON PEMAN NATCASH -->
     <div id="natcash-checkout-view">
       <div class="natcash-header">
         <div class="natcash-logo-text"><i class="fa-solid fa-money-bill-transfer"></i> NATCASH PAYMENT</div>
@@ -913,7 +909,7 @@ footer{
           <span style="font-size:0.8rem; color:var(--muted); display:block; text-transform:uppercase;">Nimewo Natcash:</span>
           <span class="natcash-number">43 59 53 35</span>
         </div>
-        Apre ou fin fè transfè a, tanpri peze bouton <strong>"Konfime sou WhatsApp"</strong> la pou voye prèv la bay Germain Tech pou aktivasyon rapid.
+        Apre ou fin fè transfè a, tanpri klike sou bouton anba a <strong>"Konfime sou WhatsApp"</strong> pou voye mesaj ak prèv la bay Germain Tech pou aktivasyon an.
         <small class="alert-warning-nat">⚠️ Pa fèmen paj la san ou pa klike sou bouton konfimasyon an.</small>
       </div>
 
@@ -926,6 +922,7 @@ footer{
 </div>
 
 <script>
+// Tradiksyon dinamik nèt ale
 const T = {
   ht:{
     nav_shop:"Shop",nav_courses:"Kours",nav_builder:"Kreyasyon Site",nav_support:"Sipò",
@@ -1069,14 +1066,13 @@ function submitForm(){
   document.getElementById('successMsg').classList.add('show');
 }
 
-/* MODAL CONTROL VEWS */
+/* KONTWÒL MODAL PEMAN */
 function openModal(product, price){
   currentModalProduct = product;
   currentModalPrice = price;
   document.getElementById('modal-title').textContent = product;
   document.getElementById('modal-price').textContent = price;
   
-  // Reset Views
   document.getElementById('info-order-view').style.display = 'block';
   document.getElementById('natcash-checkout-view').style.display = 'none';
   
@@ -1091,10 +1087,9 @@ function goToNatcashView(){
   const name = document.getElementById('m-name').value.trim();
   const email = document.getElementById('m-email').value.trim();
   if(!name||!email){
-    alert('Tanpri ranpli non ak imel ou pou nou ka idantifye kòmand lan.');
+    alert('Tanpri ranpli non ak imel ou pou nou ka valide kòmand lan.');
     return;
   }
-  // Chanje ekran an pou montre Natcash
   document.getElementById('info-order-view').style.display = 'none';
   document.getElementById('natcash-checkout-view').style.display = 'block';
 }
@@ -1114,7 +1109,6 @@ function submitOrderNatcash(){
     `✅ Mwen sot fè transfè a sou kont 43595335 lan, tanpri aktive sèvis mwen!`
   );
   
-  // Louvri WhatsApp san paj blanch
   window.open(`https://wa.me/19043181164?text=${waMsg}`, '_blank');
   closeModal();
 }
