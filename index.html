@@ -3,32 +3,34 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Germain Tech | G-Legacy – Shop | Kous | Kreyasyon</title>
+<title>G-Legacy – Shop | Kours | Kreyasyon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<!-- FontAwesome pou bèl Logo ak Ikòn Reyèl -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 <style>
 :root{
-  --gold:#D4AF37;
-  --gold-light:#F3E5AB;
-  --dark:#07070A;
-  --dark2:#0F0F14;
-  --dark3:#161622;
-  --card:#1A1A26;
-  --border:rgba(212,175,55,0.15);
-  --border-hover:rgba(212,175,55,0.4);
-  --text:#F3F3F6;
-  --muted:#94A3B8;
-  --accent:#6D28D9;
-  --accent2:#0EA5E9;
-  --natcash:#E11D48;
+  --gold:#C9A84C;
+  --gold-light:#F0D080;
+  --dark:#0A0A0F;
+  --dark2:#13131A;
+  --dark3:#1C1C28;
+  --card:#1E1E2E;
+  --border:#2A2A3E;
+  --text:#E8E8F0;
+  --muted:#8888A8;
+  --accent:#7B5EA7;
+  --accent2:#3ECFCF;
+  --natcash:#E1261C; /* Koulè Natcash */
   --radius:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
   background:var(--dark);
   color:var(--text);
-  font-family:'Plus Jakarta Sans',sans-serif;
+  font-family:'DM Sans',sans-serif;
   min-height:100vh;
   overflow-x:hidden;
 }
@@ -43,33 +45,26 @@ body{
 }
 #lang-screen h1{
   font-family:'Playfair Display',serif;
-  font-size:clamp(2.5rem,7vw,4.5rem);
-  font-weight:800;
-  background:linear-gradient(135deg, var(--gold), #FFF, var(--gold-light));
+  font-size:clamp(2.5rem,6vw,4rem);
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   text-align:center;
-  letter-spacing:-1px;
+  letter-spacing:2px;
 }
-#lang-screen p{color:var(--muted);font-size:1.1rem;letter-spacing:1px;}
-.lang-grid{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
+#lang-screen p{color:var(--muted);font-size:1.1rem;margin-top:-.5rem;}
+.lang-grid{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;}
 .lang-btn{
-  padding:1.2rem 3rem;
-  border:1px solid var(--border);
+  padding:1rem 2.5rem;
+  border:2px solid var(--border);
   background:var(--card);
   color:var(--text);
-  font-family:inherit;
+  font-family:'DM Sans',sans-serif;
   font-size:1.1rem;font-weight:600;
   border-radius:50px;cursor:pointer;
-  transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  display:flex;align-items:center;gap:0.8rem;
+  transition:all .3s ease;
 }
-.lang-btn:hover{
-  border-color:var(--gold);
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(214,175,55,0.15);
-  background:linear-gradient(135deg, var(--card), rgba(214,175,55,0.05));
-}
-.lang-flag{font-size:1.5rem;}
+.lang-btn:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 30px rgba(201,168,76,.2);}
+.lang-flag{margin-right:.5rem;}
 
 /* ===== MAIN SITE ===== */
 #main-site{display:none;}
@@ -78,36 +73,36 @@ body{
 /* ===== NAV ===== */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(7,7,10,0.8);
-  backdrop-filter:blur(24px);
+  background:rgba(10,10,15,.9);
+  backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
   padding:1.2rem 2rem;
   display:flex;align-items:center;justify-content:space-between;
 }
 .nav-logo{
   font-family:'Playfair Display',serif;
-  font-size:1.8rem;font-weight:800;
-  background:linear-gradient(135deg,var(--gold),#FFF);
+  font-size:1.8rem;font-weight:900;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   cursor:pointer;
 }
-.nav-links{display:flex;gap:2rem;align-items:center;}
+.nav-links{display:flex;gap:1.8rem;align-items:center;}
 .nav-links a{
   color:var(--muted);text-decoration:none;
   font-weight:500;font-size:.95rem;
   transition:color .2s;cursor:pointer;
 }
 .nav-links a:hover{color:var(--gold);}
-.nav-right{display:flex;gap:1rem;align-items:center;}
+.nav-right{display:flex;gap:.8rem;align-items:center;}
 .nav-lang-btn{
-  padding:.5rem 1.2rem;border:1px solid var(--border);
-  background:transparent;color:var(--text);
-  border-radius:50px;cursor:pointer;font-size:.85rem;
-  transition:all .2s;font-weight:600;
+  padding:.4rem 1rem;border:1px solid var(--border);
+  background:transparent;color:var(--muted);
+  border-radius:20px;cursor:pointer;font-size:.85rem;
+  transition:all .2s;
 }
-.nav-lang-btn:hover{border-color:var(--gold);background:rgba(214,175,55,0.1);}
-.hamburger{display:none;flex-direction:column;gap:6px;cursor:pointer;background:none;border:none;}
-.hamburger span{width:26px;height:2px;background:var(--text);transition:.3s;}
+.nav-lang-btn:hover{border-color:var(--gold);color:var(--gold);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+.hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
 
 /* ===== HERO ===== */
 #home{
@@ -117,335 +112,292 @@ nav{
   position:relative;overflow:hidden;
 }
 .hero-bg{
-  position:absolute;inset:0;z-index:0;
-  background:radial-gradient(circle at 50% 15%,rgba(214,175,55,0.12),transparent 50%),
-              radial-gradient(circle at 80% 80%,rgba(14,165,233,0.08),transparent 40%);
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(123,94,167,.18),transparent),
+              radial-gradient(ellipse 60% 40% at 80% 80%,rgba(62,207,207,.1),transparent);
+  z-index: 0;
 }
 .hero-tag{
   position:relative;z-index:1;
-  display:inline-flex;align-items:center;gap:0.5rem;
-  padding:.5rem 1.5rem;
-  background:rgba(214,175,55,0.06);
+  display:inline-block;padding:.5rem 1.4rem;
   border:1px solid var(--gold);color:var(--gold);
-  border-radius:50px;font-size:.85rem;font-weight:600;
-  letter-spacing:1px;text-transform:uppercase;margin-bottom:2rem;
+  border-radius:20px;font-size:.85rem;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem;
 }
 #home h1{
   position:relative;z-index:1;
   font-family:'Playfair Display',serif;
-  font-size:clamp(3rem,8vw,6rem);line-height:1.05;
-  margin-bottom:2rem;font-weight:800;
+  font-size:clamp(3rem,8vw,6rem);line-height:1.1;margin-bottom:1.5rem;
 }
 #home h1 span{
-  background:linear-gradient(135deg,var(--gold),var(--gold-light),#FFF);
+  background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--accent2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 #home p.hero-sub{
   position:relative;z-index:1;
   font-size:1.25rem;color:var(--muted);max-width:650px;
-  margin:0 auto 3rem;line-height:1.8;
+  margin:0 auto 2.5rem;line-height:1.7;
 }
 .hero-btns{position:relative;z-index:1;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;}
 .btn-primary{
-  padding:1.1rem 2.5rem;
-  background:linear-gradient(135deg,var(--gold),#B5942A);
-  color:#000;font-weight:700;border:none;
+  padding:1rem 2.5rem;
+  background:linear-gradient(135deg,var(--gold),#A87830);
+  color:#0A0A0F;font-weight:700;border:none;
   border-radius:50px;cursor:pointer;font-size:1rem;
-  transition:all .3s;box-shadow:0 6px 24px rgba(214,175,55,0.25);
+  transition:all .3s;box-shadow:0 4px 20px rgba(201,168,76,.3);
 }
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(214,175,55,0.4);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.5);}
 .btn-secondary{
-  padding:1.1rem 2.5rem;
-  background:rgba(255,255,255,0.03);color:var(--text);
-  border:1px solid var(--border);border-radius:50px;
-  cursor:pointer;font-size:1rem;font-weight:600;
-  transition:all .3s;
+  padding:1rem 2.5rem;
+  background:transparent;color:var(--text);
+  border:2px solid var(--border);border-radius:50px;
+  cursor:pointer;font-size:1rem;font-weight:600;transition:all .3s;
 }
-.btn-secondary:hover{border-color:var(--gold);background:rgba(214,175,55,0.05);}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
 
 /* ===== SECTIONS ===== */
-section{padding:7rem 2rem;position:relative;}
+section{padding:6rem 2rem; position: relative;}
 .section-header{text-align:center;margin-bottom:4rem;}
 .section-tag{
   display:inline-block;padding:.4rem 1.2rem;
-  background:rgba(214,175,55,0.08);color:var(--gold);
-  border-radius:50px;font-size:.8rem;font-weight:700;
-  letter-spacing:1px;text-transform:uppercase;margin-bottom:1.2rem;
-  border:1px solid rgba(214,175,55,0.1);
+  background:rgba(201,168,76,.1);color:var(--gold);
+  border-radius:20px;font-size:.8rem;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem;
 }
 .section-title{
   font-family:'Playfair Display',serif;
-  font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:1rem;font-weight:800;
+  font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:1rem;
 }
 .section-sub{color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7;font-size:1.05rem;}
 
-/* ===== SHOP ===== */
+/* ===== SHOP & PACKAGES ===== */
 #shop{background:var(--dark2);}
-.shop-tabs{display:flex;gap:1rem;justify-content:center;margin-bottom:3.5rem;flex-wrap:wrap;}
+.shop-tabs{display:flex;gap:.8rem;justify-content:center;margin-bottom:3rem;flex-wrap:wrap;}
 .shop-tab{
-  padding:.8rem 1.8rem;border-radius:50px;
+  padding:.7rem 1.6rem;border-radius:30px;
   border:1px solid var(--border);background:var(--card);
   color:var(--muted);cursor:pointer;font-size:.95rem;font-weight:600;
-  transition:all .3s;
+  transition:all .25s;
 }
 .shop-tab.active, .shop-tab:hover{
-  background:var(--gold);color:#000;border-color:var(--gold);
-  box-shadow:0 4px 15px rgba(214,175,55,0.2);
+  background:var(--gold);color:#0A0A0F;border-color:var(--gold);
 }
-.shop-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+
+/* WhatsApp Link Cards */
+.wha-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
   gap:2rem;max-width:1200px;margin:0 auto;
 }
+.wha-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .3s, box-shadow .3s;
+}
+.wha-card:hover{transform:translateY(-6px);box-shadow:0 15px 40px rgba(0,0,0,.4);}
+.wha-img-banner{
+  height:140px;background:linear-gradient(135deg, #128c7e, #25d366);
+  display:flex;align-items:center;justify-content:center;font-size:3.5rem;color:#fff;
+}
+.wha-content{padding:1.8rem;display:flex;flex-direction:column;flex-grow:1;gap:0.8rem;}
+.wha-title{font-size:1.3rem;font-weight:700;}
+.wha-desc{color:var(--muted);font-size:.9rem;line-height:1.6;}
+.wha-footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:1rem;}
+.wha-price{font-family:'Space Mono',monospace;color:var(--gold);font-size:1.3rem;font-weight:700;}
+.wha-buy{
+  padding:.6rem 1.2rem;background:#25d366;color:#fff;
+  border:none;border-radius:8px;cursor:pointer;font-weight:700;font-size:.9rem;
+  display:flex;align-items:center;gap:.5rem;transition:background .2s;
+}
+.wha-buy:hover{background:#128c7e;}
 
-/* Custom modern items */
-.wha-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem; max-width: 1200px; margin: 0 auto;
-}
-.wha-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-.wha-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-}
-.card-icon-wrap {
-  width: 60px; height: 60px;
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(214,175,55,0.1);
-  color: var(--gold);
-}
-.card-icon-wrap svg {
-  width: 32px; height: 32px; fill: currentColor;
-}
-.wha-title { font-size: 1.3rem; font-weight: 700; color: #FFF; }
-.wha-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
-.wha-price { font-family: 'Space Mono', monospace; color: var(--gold); font-size: 1.5rem; font-weight: 700; }
-.wha-buy {
-  padding: .9rem 1.5rem; background: linear-gradient(135deg, #25D366, #128C7E);
-  color: #FFF; border: none; border-radius: 10px; cursor: pointer;
-  font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;
-  transition: all 0.2s; width: 100%;
-}
-.wha-buy:hover { opacity: 0.9; transform: scale(1.01); }
-
-/* Visibility Cards with Logos */
+/* Social Boost Platform Grid */
 .platform-grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
   gap:2rem;max-width:1200px;margin:0 auto;
 }
 .platform-card{
   background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:2rem;
+  border-radius:var(--radius);padding:2rem 1.5rem;
   display:flex;flex-direction:column;gap:1.2rem;
-  transition:all .3s ease;
+  transition:transform .3s;
 }
-.platform-card:hover{transform:translateY(-6px);border-color:var(--gold);}
-.platform-header { display: flex; align-items: center; gap: 1rem; }
-.platform-logo-svg { width: 40px; height: 40px; fill: currentColor; }
-.tiktok-color { color: #EE1D52; }
-.facebook-color { color: #1877F2; }
-.youtube-color { color: #FF0000; }
-.instagram-color { color: #E1306C; }
-.platform-name{font-weight:700;font-size:1.3rem;color:#FFF;}
-.platform-desc{color:var(--muted);font-size:.9rem;line-height:1.6;}
-.platform-packages{display:flex;flex-direction:column;gap:.8rem;margin-top:.5rem;}
+.platform-card:hover{transform:translateY(-5px);}
+.platform-header-box{display:flex;align-items:center;gap:1rem;}
+.platform-icon-frame{
+  width:50px;height:50px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#fff;
+}
+.platform-card.tiktok .platform-icon-frame{background:#000000;}
+.platform-card.facebook .platform-icon-frame{background:#1877F2;}
+.platform-card.youtube .platform-icon-frame{background:#FF0000;}
+.platform-card.instagram .platform-icon-frame{background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);}
+.platform-name{font-size:1.3rem;font-weight:700;}
+.platform-desc{color:var(--muted);font-size:.9rem;line-height:1.5;}
+.platform-packages{display:flex;flex-direction:column;gap:.8rem;}
 .pkg{
   display:flex;justify-content:space-between;align-items:center;
-  padding:.8rem 1rem;background:var(--dark3);border-radius:10px;
-  border:1px solid rgba(255,255,255,0.03);
+  padding:.7rem 1rem;background:var(--dark3);border-radius:10px;border:1px solid var(--border);
 }
-.pkg-label{font-size:.9rem;color:var(--text);font-weight:500;}
-.pkg-price{font-family:'Space Mono',monospace;color:var(--gold);font-size:1rem;font-weight:700;}
+.pkg-label{font-size:.88rem;font-weight:500;}
+.pkg-price{font-family:'Space Mono',monospace;color:var(--gold);font-weight:700;}
 .pkg-buy{
   padding:.4rem 1rem;background:var(--accent);color:#fff;
-  border:none;border-radius:6px;cursor:pointer;font-size:.85rem;font-weight:600;
-  transition:all 0.2s;
+  border:none;border-radius:6px;cursor:pointer;font-size:.82rem;font-weight:700;
+  transition:opacity .2s;
 }
-.pkg-buy:hover{background:#7C3AED; transform: translateY(-1px);}
+.pkg-buy:hover{opacity:0.85;}
 
 /* ===== COURSES ===== */
 #courses{background:var(--dark);}
 .courses-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
   gap:2rem;max-width:1200px;margin:0 auto;
 }
 .course-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--radius);overflow:hidden;
-  transition:all .3s ease;display:flex;flex-direction:column;
+  transition:transform .3s, box-shadow .3s;
 }
-.course-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 20px 40px rgba(0,0,0,0.3);}
-.course-img{
-  height:180px;display:flex;align-items:center;justify-content:center;
-  position:relative;color:#FFF;
+.course-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.5);}
+.course-img-box{
+  height:180px;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;
 }
-.course-img svg { width: 50px; height: 50px; fill: currentColor; }
-.course-img.art{background:linear-gradient(135deg,#311042, #6D28D9);}
-.course-img.tech{background:linear-gradient(135deg,#032B45, #0EA5E9);}
-.course-img.beauty{background:linear-gradient(135deg,#4C0519, #BE123C);}
-.course-body{padding:1.6rem;display:flex;flex-direction:column;flex:1;}
+.course-img-box.c1{background:linear-gradient(135deg,#667eea,#764ba2);}
+.course-img-box.c2{background:linear-gradient(135deg,#2193b0,#6dd5ed);}
+.course-img-box.c3{background:linear-gradient(135deg,#11998e,#38ef7d);}
+.course-img-box.c4{background:linear-gradient(135deg,#ff9966,#ff5e62);}
+.course-img-box.c5{background:linear-gradient(135deg,#ee9ca7,#ffdde1);}
+.course-img-box.c6{background:linear-gradient(135deg,#4ca1af,#c4e0e5);}
+.course-avatar{width:70px;height:70px;background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+.course-body{padding:1.6rem;}
 .course-tag-sm{
-  align-self: flex-start;padding:.3rem .8rem;
-  border-radius:50px;font-size:.75rem;font-weight:700;
-  margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.5px;
+  display:inline-block;padding:.2rem .8rem;
+  border-radius:30px;font-size:.75rem;font-weight:700;margin-bottom:.8rem;
 }
-.tag-art{background:rgba(109,40,217,0.2);color:#A78BFA;}
-.tag-beauty{background:rgba(190,18,60,0.2);color:#FB7185;}
-.tag-tech{background:rgba(14,165,233,0.2);color:#7DD3FC;}
-.course-title{font-weight:700;font-size:1.2rem;margin-bottom:.6rem;color:#FFF;}
-.course-desc{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:1.5rem;}
+.tag-art{background:rgba(62,207,207,.15);color:var(--accent2);}
+.tag-beauty{background:rgba(253,29,29,.1);color:#fd6b6b;}
+.tag-tech{background:rgba(123,94,167,.15);color:#B09FD0;}
+.course-title{font-size:1.2rem;font-weight:700;margin-bottom:.6rem;}
+.course-desc{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:1.2rem;}
 .course-footer{
   display:flex;justify-content:space-between;align-items:center;
-  padding-top:1.2rem;border-top:1px solid rgba(255,255,255,0.05);margin-top:auto;
+  padding-top:1.2rem;border-top:1px solid var(--border);
 }
-.course-price{font-family:'Space Mono',monospace;color:var(--gold);font-weight:700;font-size:1.3rem;}
+.course-price{font-family:'Space Mono',monospace;color:var(--gold);font-size:1.2rem;font-weight:700;}
 .enroll-btn{
-  padding:.6rem 1.5rem;background:linear-gradient(135deg,var(--gold),#B5942A);
-  color:#000;border:none;border-radius:8px;cursor:pointer;
-  font-weight:700;font-size:.9rem;transition:all .2s;
+  padding:.6rem 1.4rem;background:linear-gradient(135deg,var(--accent),#5a3a8a);
+  color:#fff;border:none;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;transition:transform .2s;
 }
-.enroll-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(214,175,55,0.2);}
+.enroll-btn:hover{transform:scale(1.04);}
 
 /* ===== WEBSITE BUILDER ===== */
 #builder{background:var(--dark2);}
 .plans-wrapper{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:2.5rem;max-width:850px;margin:0 auto 4rem;
+  gap:2.5rem;max-width:850px;margin:0 auto 3rem;
 }
 .plan-card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:24px;padding:3rem 2rem;text-align:center;
-  position:relative;transition:all 0.3s ease;
+  background:var(--card);border:2px solid var(--border);
+  border-radius:20px;padding:3rem 2rem;text-align:center;
+  position:relative;transition:transform .3s;
 }
 .plan-card.featured{
-  border-color:var(--gold);
-  box-shadow:0 0 40px rgba(214,175,55,0.1);
+  border-color:var(--gold);box-shadow:0 0 40px rgba(201,168,76,.15);
 }
-.plan-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.4);}
+.plan-card:hover{transform:translateY(-6px);}
 .plan-badge{
-  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-  background:linear-gradient(135deg,var(--gold),#B5942A);
-  color:#000;padding:.4rem 1.8rem;border-radius:50px;
-  font-size:.75rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--gold),#A87830);
+  color:#0A0A0F;padding:.4rem 2rem;border-radius:0 0 12px 12px;
+  font-size:.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
 }
-.plan-name{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:.5rem;color:#FFF;font-weight:700;}
+.plan-name{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:.5rem;}
 .plan-price{
-  font-family:'Space Mono',monospace;
-  font-size:3rem;color:var(--gold);font-weight:700;
-  margin:1.5rem 0;
+  font-family:'Space Mono',monospace;font-size:3rem;color:var(--gold);font-weight:700;margin:1rem 0;
 }
 .plan-price small{font-size:1rem;color:var(--muted);}
 .plan-features{list-style:none;text-align:left;margin-bottom:2rem;}
 .plan-features li{
-  padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,0.04);
-  font-size:.95rem;display:flex;gap:.8rem;align-items:center;color:var(--text);
+  padding:.6rem 0;border-bottom:1px solid var(--border);
+  font-size:.92rem;display:flex;gap:.7rem;align-items:center;color:var(--text);
 }
 .plan-features li::before{content:'✓';color:var(--gold);font-weight:700;}
-.plan-features li.no::before{content:'✗';color:#EF4444;}
-.plan-features li.no{color:#4B5563;}
+.plan-features li.no::before{content:'✗';color:#666;}
+.plan-features li.no{color:#555;}
 .choose-plan{
   width:100%;padding:1rem;border-radius:12px;border:none;
   font-weight:700;font-size:1rem;cursor:pointer;transition:all .3s;
 }
 .plan-card.featured .choose-plan{
-  background:linear-gradient(135deg,var(--gold),#B5942A);color:#000;
+  background:linear-gradient(135deg,var(--gold),#A87830);color:#0A0A0F;
 }
 .plan-card:not(.featured) .choose-plan{
-  background:transparent;color:var(--text);border:1px solid var(--border);
+  background:var(--dark3);color:var(--text);border:2px solid var(--border);
 }
-.plan-card:not(.featured) .choose-plan:hover{border-color:var(--gold);background:rgba(214,175,55,0.05);}
+.plan-card:not(.featured) .choose-plan:hover{border-color:var(--gold);color:var(--gold);}
 .builder-cta{text-align:center;margin-top:2rem;}
 .carrd-link{
   display:inline-flex;align-items:center;gap:.8rem;
-  padding:1.2rem 3rem;
-  background:linear-gradient(135deg,var(--accent2),#0284C7);
-  color:#FFF;font-weight:700;font-size:1.1rem;
-  border-radius:50px;text-decoration:none;
-  transition:all .3s;box-shadow:0 6px 25px rgba(14,165,233,0.3);
+  padding:1.2rem 2.5rem;background:linear-gradient(135deg,var(--accent2),#2A9A9A);
+  color:#0A0A0F;font-weight:700;font-size:1.1rem;
+  border-radius:50px;text-decoration:none;transition:all .3s;
 }
-.carrd-link:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(14,165,233,0.5);}
-.carrd-note{color:var(--muted);font-size:.95rem;margin-top:1.2rem;}
+.carrd-link:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(62,207,207,.3);}
+.carrd-note{color:var(--muted);font-size:.9rem;margin-top:1rem;}
 
 /* ===== SUPPORT ===== */
 #support{background:var(--dark);}
 .support-layout{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;max-width:1100px;margin:0 auto;
-  align-items:start;
+  gap:3rem;max-width:1100px;margin:0 auto;align-items:start;
 }
 .contact-cards{display:flex;flex-direction:column;gap:1.2rem;margin-bottom:2rem;}
 .contact-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--radius);padding:1.5rem;
   display:flex;align-items:center;gap:1.2rem;
-  text-decoration:none;color:var(--text);
-  transition:all .3s;
+  text-decoration:none;color:var(--text);transition:all .3s;
 }
-.contact-card:hover{border-color:var(--gold);transform:translateX(6px);}
-.contact-icon{width:45px; height:45px; background:rgba(255,255,255,0.05); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem;}
-.contact-info h4{font-weight:700;margin-bottom:.3rem; color:#FFF;}
-.contact-info p{color:var(--muted);font-size:.9rem;}
-.whatsapp-ceo{border-color:rgba(37,211,102,.2);}
-.whatsapp-ceo:hover{border-color:#25d366; background:rgba(37,211,102,0.03);}
-.whatsapp-staff{border-color:rgba(14,165,233,.2);}
-.whatsapp-staff:hover{border-color:var(--accent2); background:rgba(14,165,233,0.03);}
+.contact-card:hover{border-color:var(--gold);transform:translateX(5px);}
+.contact-icon{font-size:2rem;}
+.contact-info h4{font-size:1.1rem;font-weight:700;margin-bottom:.2rem;}
+.contact-info p{color:var(--muted);font-size:.88rem;}
 
-/* SUPPORT FORM */
+/* SUPPORT FORM SURV */
 .support-form{
   background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:2.5rem;
+  border-radius:var(--radius);padding:2.5rem 2rem;
 }
-.support-form h3{
-  font-family:'Playfair Display',serif;
-  font-size:1.6rem;margin-bottom:1.5rem;color:#FFF;
-}
+.support-form h3{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:1.5rem;}
 .survey-step{display:none;}
 .survey-step.active{display:block;}
-.survey-question{font-weight:600;margin-bottom:1.2rem;line-height:1.5;font-size:1.05rem;}
-.survey-options{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;}
+.survey-question{font-weight:600;margin-bottom:1.2rem;font-size:1.05rem;}
+.survey-options{display:flex;flex-direction:column;gap:.7rem;margin-bottom:1.5rem;}
 .survey-opt{
-  padding:1rem 1.2rem;border:1px solid var(--border);
-  background:var(--dark3);border-radius:12px;cursor:pointer;
-  font-size:.95rem;transition:all .2s;text-align:left;color:var(--text);
-  font-family:inherit;
+  padding:.9rem 1.2rem;border:1px solid var(--border);
+  background:var(--dark3);border-radius:10px;cursor:pointer;
+  font-size:.92rem;transition:all .2s;text-align:left;color:var(--text);
 }
-.survey-opt:hover,.survey-opt.selected{border-color:var(--gold);background:rgba(214,175,55,0.08);color:var(--gold);}
+.survey-opt:hover, .survey-opt.selected{border-color:var(--gold);background:rgba(201,168,76,.08);color:var(--gold);}
 .form-group{margin-bottom:1.2rem;}
-.form-group label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:0.5px;}
-.form-group input,.form-group textarea{
-  width:100%;padding:.9rem 1.2rem;
-  background:var(--dark3);border:1px solid var(--border);
-  color:var(--text);border-radius:10px;font-family:inherit;
-  font-size:.95rem;transition:border-color .2s;outline:none;
+.form-group label{display:block;font-size:.88rem;color:var(--muted);margin-bottom:.5rem;}
+.form-group input, .form-group textarea{
+  width:100%;padding:.9rem 1rem;background:var(--dark3);border:1px solid var(--border);
+  color:var(--text);border-radius:10px;font-family:'DM Sans',sans-serif;outline:none;
 }
-.form-group input:focus,.form-group textarea:focus{border-color:var(--gold);}
+.form-group input:focus, .form-group textarea:focus{border-color:var(--gold);}
 .form-group textarea{resize:vertical;min-height:120px;}
 .submit-btn{
-  width:100%;padding:1.1rem;background:linear-gradient(135deg,var(--gold),#B5942A);
-  color:#000;font-weight:700;font-size:1rem;border:none;
-  border-radius:10px;cursor:pointer;transition:all .3s;font-family:inherit;
+  width:100%;padding:1rem;background:linear-gradient(135deg,var(--gold),#A87830);
+  color:#0A0A0F;font-weight:700;font-size:1rem;border:none;border-radius:10px;cursor:pointer;
 }
-.submit-btn:hover{opacity:.95;transform:translateY(-1px);}
-.progress-bar{display:flex;gap:.5rem;margin-bottom:2rem;}
-.progress-step{flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,0.05);transition:.3s;}
+.progress-bar{display:flex;gap:.5rem;margin-bottom:1.5rem;}
+.progress-step{flex:1;height:5px;border-radius:4px;background:var(--border);}
 .progress-step.done{background:var(--gold);}
 .success-msg{text-align:center;padding:2rem;display:none;}
 .success-msg.show{display:block;}
-.success-icon{font-size:3.5rem;margin-bottom:1rem;}
 
 /* ===== FOOTER ===== */
 footer{
@@ -453,103 +405,75 @@ footer{
   padding:4rem 2rem;text-align:center;
 }
 .footer-logo{
-  font-family:'Playfair Display',serif;font-size:2.2rem;
-  background:linear-gradient(135deg,var(--gold),#FFF);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  margin-bottom:1.5rem;font-weight:800;
+  font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem;
 }
-.footer-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;}
+.footer-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;}
 .footer-links a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s;cursor:pointer;}
 .footer-links a:hover{color:var(--gold);}
-.footer-copy{color:var(--muted);font-size:.85rem;letter-spacing:0.5px;}
+.footer-copy{color:var(--muted);font-size:.85rem;}
 
-/* ===== PURCHASE MODAL WITH NATCASH ===== */
+/* ===== SMART MODAL OVERLAY (CHECKOUT SYSTEM) ===== */
 .modal-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,0.85);
+  position:fixed;inset:0;background:rgba(0,0,0,0.8);
   z-index:5000;display:none;align-items:center;justify-content:center;
-  backdrop-filter:blur(12px);
+  backdrop-filter:blur(10px);padding:1rem;overflow-y:auto;
 }
 .modal-overlay.show{display:flex;}
 .modal-box{
-  background:var(--card);border:1px solid var(--gold);
-  border-radius:24px;padding:2.5rem;max-width:520px;width:92%;
-  position:relative;animation:scaleIn .3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-  max-height: 90vh; overflow-y: auto;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:24px;padding:2.5rem;max-width:550px;width:100%;
+  position:relative;margin:auto;
 }
 .modal-close{
   position:absolute;top:1.2rem;right:1.2rem;
-  background:rgba(255,255,255,0.05);border:none;color:var(--muted);
-  width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;
-  display:flex;align-items:center;justify-content:center;transition:.2s;
+  background:var(--dark3);border:none;color:var(--muted);
+  width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.2rem;
+  display:flex;align-items:center;justify-content:center;
 }
-.modal-close:hover{color:#FFF;background:rgba(255,255,255,0.1);}
-.modal-title{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:1.5rem;color:#FFF;font-weight:700;}
+.modal-close:hover{color:var(--text);background:var(--border);}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:1rem;}
 
-/* Natcash UI Box */
-.natcash-box {
-  background: linear-gradient(135deg, #1E1B24, #2A1215);
-  border: 1px solid rgba(225, 29, 72, 0.3);
-  border-radius: 14px; padding: 1.2rem; margin-bottom: 1.5rem;
+/* NATCASH SCREEN STYLES */
+#natcash-checkout-view{display:none;}
+.natcash-header{
+  background:var(--natcash);color:#fff;border-radius:12px;
+  padding:1.2rem;text-align:center;margin-bottom:1.5rem;
 }
-.natcash-header {
-  display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;
+.natcash-logo-text{font-weight:900;font-size:1.5rem;letter-spacing:1px;display:flex;align-items:center;justify-content:center;gap:0.5rem;}
+.natcash-instructions{
+  background:var(--dark3);border:1px solid var(--border);
+  border-radius:12px;padding:1.2rem;margin-bottom:1.5rem;font-size:.92rem;line-height:1.6;
 }
-.natcash-badge {
-  background: var(--natcash); color: #FFF; font-weight: 800;
-  padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.75rem; letter-spacing: 0.5px;
+.natcash-number-box{
+  background:rgba(225,38,28,0.1);border:1px dashed var(--natcash);
+  padding:1rem;border-radius:10px;text-align:center;margin:1rem 0;
 }
-.natcash-title { font-weight: 700; font-size: 1rem; color: #FFF; }
-.natcash-instructions { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
-.natcash-number {
-  display: inline-block; background: rgba(225, 29, 72, 0.1); color: #FB7185;
-  font-family: 'Space Mono', monospace; font-weight: 700; padding: 0.2rem 0.6rem;
-  border-radius: 6px; margin-top: 0.4rem; font-size: 1.05rem; border: 1px dashed rgba(225,29,72,0.4);
-}
+.natcash-number{font-family:'Space Mono',monospace;font-size:1.6rem;color:#ff5252;font-weight:700;}
+.alert-warning-nat{color:#ffcc00;font-size:0.85rem;margin-top:0.5rem;display:block;}
 
-.modal-submit{
-  width:100%;padding:1.1rem;margin-top:1rem;
-  background:linear-gradient(135deg, #25D366, #128C7E);
-  color:#FFF;border:none;border-radius:12px;
-  font-weight:700;font-size:1.05rem;cursor:pointer;transition:.3s;
-  display:flex;align-items:center;justify-content:center;gap:0.5rem;
-  font-family:inherit;
-}
-.modal-submit:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(37,211,102,0.3);}
-
-/* ===== ANIMATIONS ===== */
-@keyframes scaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
-
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:900px){
-  .support-layout{grid-template-columns:1fr; gap:3rem;}
+  .support-layout{grid-template-columns:1fr;}
   .nav-links{display:none;}
   .hamburger{display:flex;}
-}
-@media(max-width:600px){
-  nav{padding:1rem;}
-  section{padding:5rem 1rem;}
-  .plans-wrapper{grid-template-columns:1fr;}
-  .modal-box{padding:1.8rem 1.2rem;}
 }
 .mobile-nav{
   display:none;position:fixed;inset:0;top:70px;z-index:900;
   background:var(--dark);padding:2rem;flex-direction:column;gap:1.5rem;
 }
 .mobile-nav.open{display:flex;}
-.mobile-nav a{
-  font-size:1.3rem;color:var(--text);text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,0.05);padding-bottom:1rem;
-  cursor:pointer;font-weight:600;
-}
+.mobile-nav a{font-size:1.3rem;color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:1rem;}
 </style>
 </head>
 <body>
 
-<!-- ===== LANGUAGE SELECTION ===== -->
+<!-- ===== CHWAZI LANG ===== -->
 <div id="lang-screen">
   <div class="hero-bg" style="pointer-events:none;"></div>
-  <h1>Germain Tech</h1>
-  <p data-ht="Chwazi lang ou" data-fr="Choisissez votre langue" data-en="Choose your language" id="lang-prompt">Chwazi lang ou</p>
+  <h1>G-Legacy</h1>
+  <p id="lang-prompt">Chwazi lang ou / Choisissez votre langue</p>
   <div class="lang-grid">
     <button class="lang-btn" onclick="setLang('ht')"><span class="lang-flag">🇭🇹</span>Kreyòl</button>
     <button class="lang-btn" onclick="setLang('fr')"><span class="lang-flag">🇫🇷</span>Français</button>
@@ -557,7 +481,6 @@ footer{
   </div>
 </div>
 
-<!-- ===== MAIN SITE ===== -->
 <div id="main-site">
 
 <!-- NAV -->
@@ -572,8 +495,8 @@ footer{
   <div class="nav-right">
     <button class="nav-lang-btn" onclick="resetLang()">🌐 Lang</button>
   </div>
-  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  <button class="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
@@ -586,14 +509,12 @@ footer{
 <!-- HERO -->
 <section id="home">
   <div class="hero-bg"></div>
-  <div style="position:relative;z-index:1;">
-    <div class="hero-tag" data-i18n="hero_tag">✦ Platfòm Nimewo 1 an Ayiti</div>
-    <h1 data-i18n="hero_h1">Germain Tech. <span>Vann. Grandi.</span></h1>
-    <p class="hero-sub" data-i18n="hero_sub">Shop pwofesyonèl, kous anliy, ak kreyasyon sit entènèt — G-Legacy pote solisyon yo pou ou.</p>
-    <div class="hero-btns">
-      <button class="btn-primary" onclick="scrollTo('shop')" data-i18n="hero_cta1">Eksplore Shop la</button>
-      <button class="btn-secondary" onclick="scrollTo('courses')" data-i18n="hero_cta2">Wè Kours yo</button>
-    </div>
+  <div class="hero-tag" data-i18n="hero_tag">✦ Platfòm Nimewo 1 an Ayiti</div>
+  <h1 data-i18n="hero_h1">Kreye. <span>Vann. Grandi.</span></h1>
+  <p class="hero-sub" data-i18n="hero_sub">Shop, kours anliy, ak zouti kreyasyon — tout bagay nan yon sèl kote ak Germain Tech.</p>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="scrollTo('shop')" data-i18n="hero_cta1">Eksplore Shop la</button>
+    <button class="btn-secondary" onclick="scrollTo('courses')" data-i18n="hero_cta2">Wè Kours yo</button>
   </div>
 </section>
 
@@ -602,7 +523,7 @@ footer{
   <div class="section-header">
     <div class="section-tag" data-i18n="shop_tag">🛍 Shop</div>
     <h2 class="section-title" data-i18n="shop_title">Pwodwi & Sèvis Nou</h2>
-    <p class="section-sub" data-i18n="shop_sub">Chèn WhatsApp pou biznis ou ak viziblite pwofesyonèl pou rezo sosyal ou.</p>
+    <p class="section-sub" data-i18n="shop_sub">Chèn WhatsApp pou biznis ou ak pakè viziblite pwofesyonèl pou reyzo sosyal ou.</p>
   </div>
   <div class="shop-tabs">
     <button class="shop-tab active" onclick="showShopTab('whatsapp',this)" data-i18n="tab_wha">💬 Chèn WhatsApp</button>
@@ -612,44 +533,50 @@ footer{
   <!-- WhatsApp Links -->
   <div id="tab-whatsapp" class="wha-grid">
     <div class="wha-card">
-      <div class="card-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.84.5 3.56 1.38 5.04L2 22l5.12-1.34C8.56 21.48 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.42-4.4-1.16l-.32-.19-3.06.8.82-2.98-.21-.33C4.1 15.04 3.6 13.58 3.6 12c0-4.63 3.77-8.4 8.4-8.4s8.4 3.77 8.4 8.4-3.77 8.4-8.4 8.4z"/></svg>
+      <div class="wha-img-banner"><i class="fa-brands fa-whatsapp"></i></div>
+      <div class="wha-content">
+        <div class="wha-title" data-i18n="wha1_title">Chèn Basic</div>
+        <div class="wha-desc" data-i18n="wha1_desc">Lyen WhatsApp pèsonèl pou biznis ou. Kliyan yo ka kontakte ou dirèkteman.</div>
+        <div class="wha-footer">
+          <span class="wha-price">$5</span>
+          <button class="wha-buy" onclick="openModal('Chèn WhatsApp Basic','$5')"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="buy_now">Achte Kounye a</span></button>
+        </div>
       </div>
-      <div class="wha-title" data-i18n="wha1_title">Chèn Basic</div>
-      <div class="wha-desc" data-i18n="wha1_desc">Lyen WhatsApp pèsonèl pou biznis ou. Kliyan yo ka kontakte ou dirèkteman san pèdi tan.</div>
-      <div class="wha-price">$5</div>
-      <button class="wha-buy" onclick="openModal('Chèn WhatsApp Basic','$5')">💬 <span data-i18n="buy_now">Achte Kounye a</span></button>
     </div>
     <div class="wha-card">
-      <div class="card-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+      <div class="wha-img-banner" style="background:linear-gradient(135deg, #075e54, #128c7e);"><i class="fa-solid fa-bolt"></i></div>
+      <div class="wha-content">
+        <div class="wha-title" data-i18n="wha2_title">Chèn Pro</div>
+        <div class="wha-desc" data-i18n="wha2_desc">Chèn WhatsApp ak bouton pèsonalize, mesaj otomatik ak plis ankò.</div>
+        <div class="wha-footer">
+          <span class="wha-price">$15</span>
+          <button class="wha-buy" onclick="openModal('Chèn WhatsApp Pro','$15')"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="buy_now">Achte Kounye a</span></button>
+        </div>
       </div>
-      <div class="wha-title" data-i18n="wha2_title">Chèn Pro</div>
-      <div class="wha-desc" data-i18n="wha2_desc">Chèn WhatsApp avanse ak bouton pèsonalize, mesaj otomatik ak konfigirasyon prim.</div>
-      <div class="wha-price">$15</div>
-      <button class="wha-buy" onclick="openModal('Chèn WhatsApp Pro','$15')">💬 <span data-i18n="buy_now">Achte Kounye a</span></button>
     </div>
     <div class="wha-card">
-      <div class="card-icon-wrap">
-        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+      <div class="wha-img-banner" style="background:linear-gradient(135deg, #1e1e2e, var(--gold));"><i class="fa-solid fa-crown"></i></div>
+      <div class="wha-content">
+        <div class="wha-title" data-i18n="wha3_title">Chèn Business Pack</div>
+        <div class="wha-desc" data-i18n="wha3_desc">Kit konplè: 3 chèn WhatsApp + katalòg pwodwi + sistèm notifikasyon entegre.</div>
+        <div class="wha-footer">
+          <span class="wha-price">$35</span>
+          <button class="wha-buy" onclick="openModal('WhatsApp Business Pack','$35')"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="buy_now">Achte Kounye a</span></button>
+        </div>
       </div>
-      <div class="wha-title" data-i18n="wha3_title">Chèn Business Pack</div>
-      <div class="wha-desc" data-i18n="wha3_desc">Kit konplè: 3 chèn WhatsApp pwofesyonèl + katalòg pwodwi entegre + sistèm sekirite.</div>
-      <div class="wha-price">$35</div>
-      <button class="wha-buy" onclick="openModal('WhatsApp Business Pack','$35')">💬 <span data-i18n="buy_now">Achte Kounye a</span></button>
     </div>
   </div>
 
-  <!-- Visibility Section with SVG Logos -->
+  <!-- Visibility (REEL LOGOS ENTEGRE) -->
   <div id="tab-visibility" style="display:none;">
     <div class="platform-grid">
       <!-- TikTok -->
-      <div class="platform-card">
-        <div class="platform-header">
-          <svg class="platform-logo-svg tiktok-color" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.59 4.23.93.17 1.87.3 2.82.37V8.52c-1.31-.07-2.59-.51-3.67-1.25-.1.97-.43 1.91-.95 2.74-.75 1.15-1.81 2.05-3.06 2.61-.15.06-.18.15-.17.3.01 1.45.01 2.9.01 4.35 0 .52-.04 1.05-.14 1.56-.46 2.27-2.31 4.04-4.6 4.34-1.63.22-3.3-.23-4.57-1.28-1.57-1.26-2.42-3.27-2.22-5.27.18-2.22 1.77-4.14 3.96-4.61.94-.22 1.93-.13 2.82.23V11.2c-.65-.3-1.38-.39-2.07-.26-1.11.19-2.04.99-2.43 2.04-.42 1.07-.19 2.33.59 3.16.8.88 2.03 1.22 3.14.88 1.1-.31 1.93-1.28 2.14-2.41.07-.4.08-.81.08-1.21V0h.12z"/></svg>
+      <div class="platform-card tiktok">
+        <div class="platform-header-box">
+          <div class="platform-icon-frame"><i class="fa-brands fa-tiktok"></i></div>
           <div class="platform-name">TikTok</div>
         </div>
-        <div class="platform-desc" data-i18n="tiktok_desc">Ogmante swivè, vi, ak engajman reyèl sou kont TikTok ou rapidman.</div>
+        <div class="platform-desc" data-i18n="tiktok_desc">Ogmante swivè, vi ak engajman TikTok ou vit ak fò.</div>
         <div class="platform-packages">
           <div class="pkg"><span class="pkg-label">1K Followers</span><span class="pkg-price">$10</span><button class="pkg-buy" onclick="openModal('TikTok 1K Followers','$10')">Achte</button></div>
           <div class="pkg"><span class="pkg-label">5K Followers</span><span class="pkg-price">$40</span><button class="pkg-buy" onclick="openModal('TikTok 5K Followers','$40')">Achte</button></div>
@@ -657,12 +584,12 @@ footer{
         </div>
       </div>
       <!-- Facebook -->
-      <div class="platform-card">
-        <div class="platform-header">
-          <svg class="platform-logo-svg facebook-color" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+      <div class="platform-card facebook">
+        <div class="platform-header-box">
+          <div class="platform-icon-frame"><i class="fa-brands fa-facebook-f"></i></div>
           <div class="platform-name">Facebook</div>
         </div>
-        <div class="platform-desc" data-i18n="fb_desc">Paj biznis ak kontni pèsonèl ou va touche plis moun ak entèraksyon pwofesyonèl.</div>
+        <div class="platform-desc" data-i18n="fb_desc">Paj biznis ak pèsonèl ou ap touche plis moun ak vi reyèl Ayiti.</div>
         <div class="platform-packages">
           <div class="pkg"><span class="pkg-label">1K Likes Page</span><span class="pkg-price">$12</span><button class="pkg-buy" onclick="openModal('Facebook 1K Likes','$12')">Achte</button></div>
           <div class="pkg"><span class="pkg-label">5K Followers</span><span class="pkg-price">$45</span><button class="pkg-buy" onclick="openModal('Facebook 5K Followers','$45')">Achte</button></div>
@@ -670,12 +597,12 @@ footer{
         </div>
       </div>
       <!-- YouTube -->
-      <div class="platform-card">
-        <div class="platform-header">
-          <svg class="platform-logo-svg youtube-color" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <div class="platform-card youtube">
+        <div class="platform-header-box">
+          <div class="platform-icon-frame"><i class="fa-brands fa-youtube"></i></div>
           <div class="platform-name">YouTube</div>
         </div>
-        <div class="platform-desc" data-i18n="yt_desc">Grandi kanal ou rapidman ak abonman òganik ak vi otantik san risk.</div>
+        <div class="platform-desc" data-i18n="yt_desc">Grandi kanal ou pwofesyonèl ak abònman ak vi otantik.</div>
         <div class="platform-packages">
           <div class="pkg"><span class="pkg-label">500 Subs</span><span class="pkg-price">$20</span><button class="pkg-buy" onclick="openModal('YouTube 500 Subs','$20')">Achte</button></div>
           <div class="pkg"><span class="pkg-label">1K Subs</span><span class="pkg-price">$35</span><button class="pkg-buy" onclick="openModal('YouTube 1K Subs','$35')">Achte</button></div>
@@ -683,12 +610,12 @@ footer{
         </div>
       </div>
       <!-- Instagram -->
-      <div class="platform-card">
-        <div class="platform-header">
-          <svg class="platform-logo-svg instagram-color" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      <div class="platform-card instagram">
+        <div class="platform-header-box">
+          <div class="platform-icon-frame"><i class="fa-brands fa-instagram"></i></div>
           <div class="platform-name">Instagram</div>
         </div>
-        <div class="platform-desc" data-i18n="ig_desc">Plis swivè, likes ak vi pwofesyonèl pou bati yon otorite solid sou Instagram.</div>
+        <div class="platform-desc" data-i18n="ig_desc">Plis swivè, jèm ak vi reyèl pou kont Instagram ou an.</div>
         <div class="platform-packages">
           <div class="pkg"><span class="pkg-label">1K Followers</span><span class="pkg-price">$12</span><button class="pkg-buy" onclick="openModal('Instagram 1K Followers','$12')">Achte</button></div>
           <div class="pkg"><span class="pkg-label">5K Followers</span><span class="pkg-price">$45</span><button class="pkg-buy" onclick="openModal('Instagram 5K Followers','$45')">Achte</button></div>
@@ -699,23 +626,21 @@ footer{
   </div>
 </section>
 
-<!-- ===== COURSES ===== -->
+<!-- ===== COURSES (MODERN AVATARS/CARDS) ===== -->
 <section id="courses">
   <div class="section-header">
-    <div class="section-tag" data-i18n="courses_tag">🎓 Kous Anliy</div>
+    <div class="section-tag" data-i18n="courses_tag">🎓 Kours Anliy</div>
     <h2 class="section-title" data-i18n="courses_title">Aprann. Kreye. Reyisi.</h2>
-    <p class="section-sub" data-i18n="courses_sub">Kous detaye ak ekspè pou ede w metrize nouvo konpetans epi kòmanse fè revni.</p>
+    <p class="section-sub" data-i18n="courses_sub">Kous detaye ak ekspè pou ede w fòme tèt ou, kreye pwodwi pwòp ou epi fè lajan.</p>
   </div>
   <div class="courses-grid">
     <!-- Course 1 -->
     <div class="course-card">
-      <div class="course-img art">
-        <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
-      </div>
+      <div class="course-img-box c1"><div class="course-avatar"><i class="fa-solid fa-palette"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-art" data-i18n="tag_creative">Kreyatif</span>
         <div class="course-title" data-i18n="c1_title">Kreye Tikomik</div>
-        <div class="course-desc" data-i18n="c1_desc">Aprann kreye tikomik pwofesyonèl: devlopman karaktè, istwa, teknik kolorizasyon ak fason pou pibliye yo.</div>
+        <div class="course-desc" data-i18n="c1_desc">Aprann kreye tikomik pwofesyonèl. Karaktè, istwa, koulè ak piblikasyon.</div>
         <div class="course-footer">
           <span class="course-price">$29</span>
           <button class="enroll-btn" onclick="openModal('Kou: Kreye Tikomik','$29')" data-i18n="enroll">Enskri</button>
@@ -724,13 +649,11 @@ footer{
     </div>
     <!-- Course 2 -->
     <div class="course-card">
-      <div class="course-img tech">
-        <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
-      </div>
+      <div class="course-img-box c2"><div class="course-avatar"><i class="fa-solid fa-mobile-screen-button"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-tech" data-i18n="tag_tech">Teknoloji</span>
         <div class="course-title" data-i18n="c2_title">Kreye Aplikasyon</div>
-        <div class="course-desc" data-i18n="c2_desc">Kreye premye aplikasyon mobil ou. Soti nan baz la pou rive jis nan piblikasyon ofisyèl sou Google Play Store.</div>
+        <div class="course-desc" data-i18n="c2_desc">Kreye premye aplikasyon mobil ou. Depi nan zero jiska piblikasyon sou Play Store.</div>
         <div class="course-footer">
           <span class="course-price">$49</span>
           <button class="enroll-btn" onclick="openModal('Kou: Kreye Aplikasyon','$49')" data-i18n="enroll">Enskri</button>
@@ -739,13 +662,11 @@ footer{
     </div>
     <!-- Course 3 -->
     <div class="course-card">
-      <div class="course-img beauty">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L12 15v5c.34 0 .67-.03 1-.07z"/></svg>
-      </div>
+      <div class="course-img-box c3"><div class="course-avatar"><i class="fa-solid fa-soap"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-beauty" data-i18n="tag_beauty">Bote Natirèl</span>
         <div class="course-title" data-i18n="c3_title">Fè Savon Natirèl</div>
-        <div class="course-desc" data-i18n="c3_desc">Teknik avanse pou fè savon fèt lakay. Fòmilasyon, anbalaj ak estrateji pou vann yo sou mache a.</div>
+        <div class="course-desc" data-i18n="c3_desc">Teknik pou fè bon jan savon natirèl lakay ou. Fòmil, pakaj ak lavant.</div>
         <div class="course-footer">
           <span class="course-price">$25</span>
           <button class="enroll-btn" onclick="openModal('Kou: Savon Natirèl','$25')" data-i18n="enroll">Enskri</button>
@@ -754,13 +675,11 @@ footer{
     </div>
     <!-- Course 4 -->
     <div class="course-card">
-      <div class="course-img beauty">
-        <svg viewBox="0 0 24 24"><path d="M12 3c-1.2 0-2.4.4-3.4 1.2-1-.8-2.2-1.2-3.4-1.2-3.2 0-5.7 2.8-5.2 6.1.4 2.5 2.2 4.6 4.3 6.1L12 21l7.7-5.8c2.1-1.5 3.9-3.6 4.3-6.1.5-3.3-2-6.1-5.2-6.1-1.2 0-2.4.4-3.4 1.2-1-.8-2.2-1.2-3.4-1.2z"/></svg>
-      </div>
+      <div class="course-img-box c4"><div class="course-avatar"><i class="fa-solid fa-jar-wheat"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-beauty" data-i18n="tag_beauty">Bote Natirèl</span>
         <div class="course-title" data-i18n="c4_title">Lwil Cheve Natirèl</div>
-        <div class="course-desc" data-i18n="c4_desc">Kreye lwil pou swen cheve ak plant lokal. Sekrè fabrikasyon, swen ak maketing pou lanse biznis ou.</div>
+        <div class="course-desc" data-i18n="c4_desc">Kreye lwil cheve espesyal ak plant lokal pou kwasans ak swen cheve.</div>
         <div class="course-footer">
           <span class="course-price">$22</span>
           <button class="enroll-btn" onclick="openModal('Kou: Lwil Cheve','$22')" data-i18n="enroll">Enskri</button>
@@ -769,13 +688,11 @@ footer{
     </div>
     <!-- Course 5 -->
     <div class="course-card">
-      <div class="course-img beauty">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L12 15v5c.34 0 .67-.03 1-.07z"/></svg>
-      </div>
+      <div class="course-img-box c5"><div class="course-avatar"><i class="fa-solid fa-sparkles"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-beauty" data-i18n="tag_beauty">Bote Natirèl</span>
         <div class="course-title" data-i18n="c5_title">Krèm Po</div>
-        <div class="course-desc" data-i18n="c5_desc">Fòmilasyon krèm ak kòporèl natirèl. Konprann engredyan yo, melanj ak benefis pou chak kalite po.</div>
+        <div class="course-desc" data-i18n="c5_desc">Fòmil krèm kò ak po natirèl. Engredyan, bon melanj ak sekirite pou po.</div>
         <div class="course-footer">
           <span class="course-price">$28</span>
           <button class="enroll-btn" onclick="openModal('Kou: Krèm Po','$28')" data-i18n="enroll">Enskri</button>
@@ -784,13 +701,11 @@ footer{
     </div>
     <!-- Course 6 -->
     <div class="course-card">
-      <div class="course-img art">
-        <svg viewBox="0 0 24 24"><path d="M12 22C6.48 2 2 6.48 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm-1-7.14V17h2v-2.14c1.72-.45 3-2 3-3.86 0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.86 1.28 3.41 3 3.86z"/></svg>
-      </div>
+      <div class="course-img-box c6"><div class="course-avatar"><i class="fa-solid fa-bottle-droplet"></i></div></div>
       <div class="course-body">
         <span class="course-tag-sm tag-art" data-i18n="tag_creative">Kreyatif</span>
         <div class="course-title" data-i18n="c6_title">Kreye Pafen</div>
-        <div class="course-desc" data-i18n="c6_desc">Atizay ak teknik pou kreye pafen pèsonalize. Melanj sant, fòmilasyon ak teknik distribisyon.</div>
+        <div class="course-desc" data-i18n="c6_desc">Atizay ak teknik pou fè pafen pèsonèl. Melanj sant, flakon ak maketing.</div>
         <div class="course-footer">
           <span class="course-price">$35</span>
           <button class="enroll-btn" onclick="openModal('Kou: Kreye Pafen','$35')" data-i18n="enroll">Enskri</button>
@@ -804,36 +719,34 @@ footer{
 <section id="builder">
   <div class="section-header">
     <div class="section-tag" data-i18n="builder_tag">🌐 Kreyasyon Site Web</div>
-    <h2 class="section-title" data-i18n="builder_title">Kreye Sit Entènèt Ou Jodi a</h2>
-    <p class="section-sub" data-i18n="builder_sub">Chwazi plan ideyal ou a epi kòmanse devlope sit entènèt ou an kèk minit avèk platfòm Carrd la.</p>
+    <h2 class="section-title" data-i18n="builder_title">Kreye Sit Ou Jodi a</h2>
+    <p class="section-sub" data-i18n="builder_sub">Chwazi yon plan pwofesyonèl epi kòmanse sit entènèt ou an kèk minit ak Carrd Pro.</p>
   </div>
   <div class="plans-wrapper">
-    <!-- Limited Plan -->
     <div class="plan-card">
       <div class="plan-name" data-i18n="plan_lite_name">Plan Limite</div>
       <div class="plan-price">$20<small>/an</small></div>
       <ul class="plan-features">
         <li data-i18n="pl1">Kreye jiska 9 sit</li>
-        <li data-i18n="pl2">2 sit bonis gratis nèt</li>
+        <li data-i18n="pl2">2 sit bonis gratis</li>
         <li data-i18n="pl3">Sipò teknik debaz</li>
-        <li data-i18n="pl4">Modèl estanda pèsonalize</li>
-        <li class="no" data-i18n="pl5">Sit san limit</li>
+        <li data-i18n="pl4">Modèl pèsonalize</li>
+        <li class="no" data-i18n="pl5">Sit ilimite</li>
         <li class="no" data-i18n="pl6">Kreye pou tout tan</li>
       </ul>
       <button class="choose-plan" onclick="openModal('Plan Limite – Kreyasyon Site','$20')" data-i18n="choose_plan">Chwazi Plan sa</button>
     </div>
-    <!-- Pro Plan -->
     <div class="plan-card featured">
       <div class="plan-badge" data-i18n="recommended">⭐ Rekòmande</div>
       <div class="plan-name" data-i18n="plan_pro_name">Plan Pro</div>
       <div class="plan-price">$50<small>/an</small></div>
       <ul class="plan-features">
-        <li data-i18n="pp1">Sit ilimite nèt</li>
+        <li data-i18n="pp1">Sit ilimite</li>
         <li data-i18n="pp2">Kreye pou tout tan</li>
         <li data-i18n="pp3">Sipò prioritè 24/7</li>
-        <li data-i18n="pp4">Tout modèl prim disponib</li>
-        <li data-i18n="pp5">Domèn pèsonèl pwofesyonèl</li>
-        <li data-i18n="pp6">Sistèm estatistik avanse</li>
+        <li data-i18n="pp4">Tout modèl ak widgets disponib</li>
+        <li data-i18n="pp5">Domèn pèsonèl (.com, .net)</li>
+        <li data-i18n="pp6">Estatistik avanse Google Analytics</li>
       </ul>
       <button class="choose-plan" onclick="openModal('Plan Pro – Kreyasyon Site','$50')" data-i18n="choose_plan">Chwazi Plan sa</button>
     </div>
@@ -842,7 +755,7 @@ footer{
     <a href="https://carrd.co" target="_blank" class="carrd-link">
       🚀 <span data-i18n="go_carrd">Kòmanse Kreye sou Carrd</span>
     </a>
-    <p class="carrd-note" data-i18n="carrd_note">Touswit apre peman ou fin konfime, n'ap voye tout lyen ak zouti nesesè yo ba ou dirèkteman.</p>
+    <p class="carrd-note" data-i18n="carrd_note">Germain Tech ap voye tout zouti ak lyen yo ban ou dirèkteman apre peman.</p>
   </div>
 </section>
 
@@ -850,97 +763,91 @@ footer{
 <section id="support">
   <div class="section-header">
     <div class="section-tag" data-i18n="support_tag">💬 Sipò & Kontak</div>
-    <h2 class="section-title" data-i18n="support_title">Nou Toujou La Pou Ou</h2>
-    <p class="section-sub" data-i18n="support_sub">Ekri nou, kontakte jesyon santral la oswa diskite ak ekip sipò a dirèkteman.</p>
+    <h2 class="section-title" data-i18n="support_title">Nou La Pou Ou</h2>
+    <p class="section-sub" data-i18n="support_sub">Ekri nou yon mesaj rapid, kontakte PDG a, oswa pale ak ekip la dirèkteman sou WhatsApp.</p>
   </div>
   <div class="support-layout">
-    <!-- Left contacts -->
     <div class="support-left">
       <div class="contact-cards">
-        <a href="https://wa.me/19043181164" target="_blank" class="contact-card whatsapp-ceo">
+        <a href="https://wa.me/19043181164" target="_blank" class="contact-card" style="border-color: rgba(201,168,76,0.3)">
           <span class="contact-icon">👑</span>
           <div class="contact-info">
             <h4 data-i18n="ceo_title">Kontakte PDG a</h4>
             <p>+1 (904) 318-1164 · WhatsApp</p>
           </div>
-          <span style="margin-left:auto;color:#25d366;font-size:1.2rem;">↗️</span>
+          <span style="margin-left:auto;color:var(--gold);font-size:1.2rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
-        <a href="https://wa.me/50934830635" target="_blank" class="contact-card whatsapp-staff">
+        <a href="https://wa.me/50934830635" target="_blank" class="contact-card" style="border-color: rgba(62,207,207,0.3)">
           <span class="contact-icon">🎧</span>
           <div class="contact-info">
-            <h4 data-i18n="staff_title">Pale ak Ekip la</h4>
-            <p>+509 34830635 · WhatsApp</p>
+            <h4 data-i18n="staff_title">Pale ak Staff la</h4>
+            <p>+509 34 83 0635 · WhatsApp</p>
           </div>
-          <span style="margin-left:auto;color:var(--accent2);font-size:1.2rem;">↗️</span>
+          <span style="margin-left:auto;color:var(--accent2);font-size:1.2rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </a>
       </div>
       <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.8rem;">
-        <h4 style="margin-bottom:1rem;font-family:'Playfair Display',serif; color:#FFF;" data-i18n="hours_title">Orè Sipò Teknik</h4>
+        <h4 style="margin-bottom:1rem;font-family:'Playfair Display',serif;font-size:1.2rem;" data-i18n="hours_title">Orè Sipò G-Legacy</h4>
         <p style="color:var(--muted);font-size:.95rem;line-height:1.8;" data-i18n="hours_text">
-          Lendi – Vandredi: 8:00 AM – 8:00 PM<br>
-          Samdi: 9:00 AM – 5:00 PM<br>
-          Dimanch: Fèmen
+          Lendi – Vandredi: 8am – 8pm<br>
+          Samdi: 9am – 5pm<br>
+          Dimanch: Fèmé
         </p>
       </div>
     </div>
 
-    <!-- Right: multi-step form -->
+    <!-- Support Form Survey -->
     <div class="support-right">
       <div class="support-form">
-        <h3 data-i18n="form_title">✉️ Voye Yon Mesaj</h3>
+        <h3 data-i18n="form_title">✉️ Ekri Yon Mesaj</h3>
         <div class="progress-bar">
           <div class="progress-step done" id="ps1"></div>
           <div class="progress-step" id="ps2"></div>
           <div class="progress-step" id="ps3"></div>
         </div>
 
-        <!-- Step 1 -->
         <div class="survey-step active" id="step1">
-          <div class="survey-question" data-i18n="s1_q">Ki sijè prensipal mesaj ou a?</div>
+          <div class="survey-question" data-i18n="s1_q">Ki sijè mesaj ou a?</div>
           <div class="survey-options">
-            <button class="survey-opt" onclick="selectOption(this,'shop','cat')" data-i18n="s1_shop">🛍 Pwoblèm Shop / Kòmand</button>
-            <button class="survey-opt" onclick="selectOption(this,'course','cat')" data-i18n="s1_course">🎓 Kous Anliy</button>
-            <button class="survey-opt" onclick="selectOption(this,'builder','cat')" data-i18n="s1_builder">🌐 Kreyasyon Site Web</button>
-            <button class="survey-opt" onclick="selectOption(this,'other','cat')" data-i18n="s1_other">💬 Lòt Sijè Siplemantè</button>
+            <button class="survey-opt" onclick="selectOption(this,'shop')">🛍 Pwoblèm Shop / Kòmand</button>
+            <button class="survey-opt" onclick="selectOption(this,'course')">🎓 Kous Anliy</button>
+            <button class="survey-opt" onclick="selectOption(this,'builder')">🌐 Kreyasyon Site Web</button>
+            <button class="survey-opt" onclick="selectOption(this,'other')">💬 Lòt Sijè</button>
           </div>
           <button class="submit-btn" onclick="nextStep(2)" data-i18n="btn_next">Kontinye →</button>
         </div>
 
-        <!-- Step 2 -->
         <div class="survey-step" id="step2">
-          <div class="survey-question" data-i18n="s2_q">Ki kalite detay oswa difikilte ou rankontre?</div>
+          <div class="survey-question" data-i18n="s2_q">Ki kalite pwoblèm ou genyen?</div>
           <div class="survey-options">
-            <button class="survey-opt" onclick="selectOption(this,'paiement','type')" data-i18n="s2_pay">💳 Pwoblèm peman / Transfè</button>
-            <button class="survey-opt" onclick="selectOption(this,'livraison','type')" data-i18n="s2_delivery">📦 Livrezon / Aksè nan sèvis</button>
-            <button class="survey-opt" onclick="selectOption(this,'info','type')" data-i18n="s2_info">ℹ️ Demann enfòmasyon jeneral</button>
-            <button class="survey-opt" onclick="selectOption(this,'bug','type')" data-i18n="s2_bug">🐛 Erè oswa Bug sou sit la</button>
+            <button class="survey-opt" onclick="selectOption(this,'paiement')">💳 Pwoblèm peman</button>
+            <button class="survey-opt" onclick="selectOption(this,'livraison')">📦 Livrezon / Aksè</button>
+            <button class="survey-opt" onclick="selectOption(this,'info')">ℹ️ Mande enfòmasyon</button>
+            <button class="survey-opt" onclick="selectOption(this,'bug')">🐛 Erè sou sit la</button>
           </div>
           <button class="submit-btn" onclick="nextStep(3)" data-i18n="btn_next">Kontinye →</button>
         </div>
 
-        <!-- Step 3 -->
         <div class="survey-step" id="step3">
-          <div class="survey-question" data-i18n="s3_q">Konfime enfòmasyon ou yo:</div>
+          <div class="survey-question" data-i18n="s3_q">Ekri detay yo:</div>
           <div class="form-group">
-            <label data-i18n="f_name">Non Ranpli</label>
-            <input type="text" id="f-name" placeholder="Ekri non w isit..."/>
+            <label data-i18n="f_name">Non Ou</label>
+            <input type="text" id="f-name" placeholder="Jean Marie"/>
           </div>
           <div class="form-group">
-            <label data-i18n="f_email">Adrès Imel</label>
-            <input type="email" id="f-email" placeholder="nonw@mail.com"/>
+            <label data-i18n="f_email">Imel ou</label>
+            <input type="email" id="f-email" placeholder="exemple@mail.com"/>
           </div>
           <div class="form-group">
-            <label data-i18n="f_msg">Mesaj Detaye</label>
-            <textarea id="f-msg" placeholder="Dekri sa w bezwen an an detay..."></textarea>
+            <label data-i18n="f_msg">Mesaj Ou</label>
+            <textarea id="f-msg" placeholder="Ekri pwoblèm ou a isit..."></textarea>
           </div>
-          <button class="submit-btn" onclick="submitFormForm()" data-i18n="btn_send">📨 Voye sou WhatsApp</button>
+          <button class="submit-btn" onclick="submitForm()" data-i18n="btn_send">📨 Voye Mesaj la</button>
         </div>
 
-        <!-- Success Message -->
         <div class="success-msg" id="successMsg">
-          <div class="success-icon">✅</div>
-          <h4 data-i18n="success_title">Mesaj Prepare!</h4>
-          <p data-i18n="success_text">Nou pral redirije w sou WhatsApp pou voye mesaj la bay sipò teknik nou an kounye a.</p>
+          <h4 style="font-family:'Playfair Display'; font-size:1.5rem; margin-bottom:0.5rem;" data-i18n="success_title">Mesaj Resevwa!</h4>
+          <p color="var(--muted)" data-i18n="success_text">Mèsi. N'ap reponn ou nan mwens pase 24 èdtan sou WhatsApp oswa Imel.</p>
         </div>
       </div>
     </div>
@@ -949,301 +856,230 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Germain Tech</div>
+  <div class="footer-logo">G-Legacy</div>
   <div class="footer-links">
-    <a onclick="scrollTo('home')" data-i18n="nav_home">Akèy</a>
-    <a onclick="scrollTo('shop')" data-i18n="nav_shop">Shop</a>
-    <a onclick="scrollTo('courses')" data-i18n="nav_courses">Kours</a>
-    <a onclick="scrollTo('builder')" data-i18n="nav_builder">Kreyasyon Site</a>
-    <a onclick="scrollTo('support')" data-i18n="nav_support">Sipò</a>
+    <a onclick="scrollTo('home')">Akèy</a>
+    <a onclick="scrollTo('shop')">Shop</a>
+    <a onclick="scrollTo('courses')">Kours</a>
+    <a onclick="scrollTo('builder')">Kreyasyon Site</a>
+    <a onclick="scrollTo('support')">Sipò</a>
   </div>
-  <p class="footer-copy">©️ 2026 Germain Tech (G-Legacy). <span data-i18n="footer_rights">Tout dwa rezève.</span></p>
+  <p class="footer-copy">©️ 2026 G-Legacy. <span data-i18n="footer_rights">Tout dwa rezève. Germain Tech.</span></p>
 </footer>
 
-</div><!-- end main site -->
+</div>
 
-<!-- ===== PURCHASE MODAL WITH INSTANT NATCASH INSTRUCTIONS ===== -->
+<!-- ===== MODAL BIZNIS KÒMAND AK PEMAN NATCASH ===== -->
 <div class="modal-overlay" id="purchaseModal">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-title" id="modal-title">Konfime Kòmand Ou</div>
     
-    <!-- Natcash Payment Info Grid Included Directly -->
-    <div class="natcash-box">
-      <div class="natcash-header">
-        <span class="natcash-badge">NATCASH</span>
-        <span class="natcash-title">Enstriksyon Peman</span>
+    <!-- VIEW 1: ENFÒMASYON KLIYAN -->
+    <div id="info-order-view">
+      <div class="modal-title" id="modal-title">Kòmande</div>
+      <div class="modal-form">
+        <div class="form-group">
+          <label data-i18n="f_name">Non Ou</label>
+          <input type="text" id="m-name" placeholder="Jean Marie"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="f_email">Imel ou</label>
+          <input type="email" id="m-email" placeholder="exemple@mail.com"/>
+        </div>
+        <div class="form-group">
+          <label>WhatsApp</label>
+          <input type="text" id="m-phone" placeholder="+509 ..."/>
+        </div>
+        <div style="text-align:center;padding:1rem;background:rgba(201,168,76,.08);border-radius:10px;margin-bottom:1rem;">
+          <span style="color:var(--muted);font-size:.9rem;" data-i18n="total">Total:</span>
+          <span id="modal-price" style="font-family:'Space Mono';color:var(--gold);font-size:1.4rem;font-weight:700;margin-left:.5rem;"></span>
+        </div>
+        <button class="modal-submit" onclick="goToNatcashView()" style="width:100%; padding:1rem; background:linear-gradient(135deg,var(--gold),#A87830); color:#0A0A0F; border:none; border-radius:10px; font-weight:700; font-size:1rem; cursor:pointer;">
+          Proceed to Payment (Natcash) →
+        </button>
       </div>
-      <p class="natcash-instructions">
-        Tanpri fè transfè montan an sou nimewo ofisyèl Natcash Germain Tech la anvan ou konfime kòmand lan:
-      </p>
-      <div class="natcash-number">43 59 53 35</div>
     </div>
 
-    <div class="modal-form">
-      <div class="form-group">
-        <label data-i18n="f_name">Non Ranpli</label>
-        <input type="text" id="m-name" placeholder="Eg: Jean Marie"/>
+    <!-- VIEW 2: PAJ PEMAN NATCASH REYÈL (KORÈK ANNDAN SÈVÈ A) -->
+    <div id="natcash-checkout-view">
+      <div class="natcash-header">
+        <div class="natcash-logo-text"><i class="fa-solid fa-money-bill-transfer"></i> NATCASH PAYMENT</div>
       </div>
-      <div class="form-group">
-        <label data-i18n="f_email">Adrès Imel</label>
-        <input type="email" id="m-email" placeholder="nonw@mail.com"/>
+      <h3 style="font-family:'Playfair Display'; font-size:1.3rem; margin-bottom:1rem; text-align:center;">Fè Transfè Natcash ou</h3>
+      
+      <div class="natcash-instructions">
+        Pou konfime kòmand ou an, tanpri voye valè lajan an sou nimewo kont ofisyèl Natcash sa a:
+        <div class="natcash-number-box">
+          <span style="font-size:0.8rem; color:var(--muted); display:block; text-transform:uppercase;">Nimewo Natcash:</span>
+          <span class="natcash-number">43 59 53 35</span>
+        </div>
+        Apre ou fin fè transfè a, tanpri peze bouton <strong>"Konfime sou WhatsApp"</strong> la pou voye prèv la bay Germain Tech pou aktivasyon rapid.
+        <small class="alert-warning-nat">⚠️ Pa fèmen paj la san ou pa klike sou bouton konfimasyon an.</small>
       </div>
-      <div class="form-group">
-        <label>Nimewo WhatsApp Pou Kontakte w</label>
-        <input type="text" id="m-phone" placeholder="Eg: +509 4359 5335"/>
-      </div>
-      <div id="modal-price-display" style="text-align:center;padding:1rem;background:rgba(214,175,55,0.06);border-radius:12px;margin-bottom:1rem; border:1px solid rgba(214,175,55,0.15);">
-        <span style="color:var(--muted);font-size:.95rem;" data-i18n="total">Total Pou Peye:</span>
-        <span id="modal-price" style="font-family:'Space Mono';color:var(--gold);font-size:1.5rem;font-weight:700;margin-left:.5rem;"></span>
-      </div>
-      <button class="modal-submit" onclick="submitOrder()">
-        💬 <span data-i18n="confirm_order">Voye Kòmand lan sou WhatsApp</span>
+
+      <button onclick="submitOrderNatcash()" style="width:100%; padding:1rem; background:var(--natcash); color:#fff; border:none; border-radius:10px; font-weight:700; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:0.5rem;">
+        <i class="fa-brands fa-whatsapp"></i> Konfime Peman sou WhatsApp
       </button>
     </div>
+
   </div>
 </div>
 
 <script>
-// Global variables for states
-let currentLang = 'ht';
-let selectedCategory = '';
-let selectedIssueType = '';
-let currentProduct = '';
-let currentPrice = '';
-
-// ==================== TRANSLATIONS ====================
 const T = {
   ht:{
-    nav_home:"Akèy",nav_shop:"Shop",nav_courses:"Kours",nav_builder:"Kreyasyon Site",nav_support:"Sipò",
+    nav_shop:"Shop",nav_courses:"Kours",nav_builder:"Kreyasyon Site",nav_support:"Sipò",
     hero_tag:"✦ Platfòm Nimewo 1 an Ayiti",
-    hero_h1:'Germain Tech. <span>Vann. Grandi.</span>',
-    hero_sub:"Shop pwofesyonèl, kous anliy, ak kreyasyon sit entènèt — G-Legacy pote solisyon yo pou ou.",
+    hero_h1:'Kreye. <span>Vann. Grandi.</span>',
+    hero_sub:"Shop, kours anliy, ak zouti kreyasyon — tout bagay nan yon sèl kote ak Germain Tech.",
     hero_cta1:"Eksplore Shop la",hero_cta2:"Wè Kours yo",
-    shop_tag:"🛍 Shop",shop_title:"Pwodwi & Sèvis Nou",shop_sub:"Chèn WhatsApp pou biznis ou ak viziblite pwofesyonèl pou rezo sosyal ou.",
+    shop_tag:"🛍 Shop",shop_title:"Pwodwi & Sèvis Nou",shop_sub:"Chèn WhatsApp pou biznis ou ak pakè viziblite pwofesyonèl pou reyzo sosyal ou.",
     tab_wha:"💬 Chèn WhatsApp",tab_vis:"📈 Viziblite Sosyal",
-    wha1_title:"Chèn Basic",wha1_desc:"Lyen WhatsApp pèsonèl pou biznis ou. Kliyan yo ka kontakte ou dirèkteman san pèdi tan.",
-    wha2_title:"Chèn Pro",wha2_desc:"Chèn WhatsApp avanse ak bouton pèsonalize, mesaj otomatik ak konfigirasyon prim.",
-    wha3_title:"Chèn Business Pack",wha3_desc:"Kit konplè: 3 chèn WhatsApp pwofesyonèl + katalòg pwodwi entegre + sistèm sekirite.",
+    wha1_title:"Chèn Basic",wha1_desc:"Lyen WhatsApp pèsonèl pou biznis ou. Kliyan yo ka kontakte ou dirèkteman.",
+    wha2_title:"Chèn Pro",wha2_desc:"Chèn WhatsApp ak bouton pèsonalize, mesaj otomatik ak plis ankò.",
+    wha3_title:"Chèn Business Pack",wha3_desc:"Kit konplè: 3 chèn WhatsApp + katalòg pwodwi + sistèm notifikasyon entegre.",
     buy_now:"Achte Kounye a",
-    tiktok_desc:"Ogmante swivè, vi, ak engajman reyèl sou kont TikTok ou rapidman.",
-    fb_desc:"Paj biznis ak kontni pèsonèl ou va touche plis moun ak entèraksyon pwofesyonèl.",
-    yt_desc:"Grandi kanal ou rapidman ak abonman òganik ak vi otantik san risk.",
-    ig_desc:"Plis swivè, likes ak vi pwofesyonèl pou bati yon otorite solid sou Instagram.",
-    courses_tag:"🎓 Kours Anliy",courses_title:"Aprann. Kreye. Reyisi.",courses_sub:"Kous peyan ekspè ki pral ede ou kreye pwodwi ak rantre lajan.",
+    tiktok_desc:"Ogmante swivè, vi ak engajman TikTok ou vit ak fò.",
+    fb_desc:"Paj biznis ak pèsonèl ou ap touche plis moun ak vi reyèl Ayiti.",
+    yt_desc:"Grandi kanal ou pwofesyonèl ak abònman ak vi otantik.",
+    ig_desc:"Plis swivè, jèm ak vi reyèl pou kont Instagram ou an.",
+    courses_tag:"🎓 Kours Anliy",courses_title:"Aprann. Kreye. Reyisi.",courses_sub:"Kous detaye ak ekspè pou ede w fòme tèt ou, kreye pwodwi pwòp ou epi fè lajan.",
     tag_creative:"Kreyatif",tag_tech:"Teknoloji",tag_beauty:"Bote Natirèl",
-    c1_title:"Kreye Tikomik",c1_desc:"Aprann kreye tikomik pwofesyonèl: devlopman karaktè, istwa, teknik kolorizasyon ak fason pou pibliye yo.",
-    c2_title:"Kreye Aplikasyon",c2_desc:"Kreye premye aplikasyon mobil ou. Soti nan baz la pou rive jis nan piblikasyon ofisyèl sou Google Play Store.",
-    c3_title:"Fè Savon Natirèl",c3_desc:"Teknik avanse pou fè savon fèt lakay. Fòmilasyon, anbalaj ak estrateji pou vann yo sou mache a.",
-    c4_title:"Lwil Cheve Natirèl",c4_desc:"Kreye lwil pou swen cheve ak plant lokal. Sekrè fabrikasyon, swen ak maketing pou lanse biznis ou.",
-    c5_title:"Krèm Po",c5_desc:"Fòmilasyon krèm ak kòporèl natirèl. Konprann engredyan yo, melanj ak benefis pou chak kalite po.",
-    c6_title:"Kreye Pafen",c6_desc:"Atizay ak teknik pou kreye pafen pèsonalize. Melanj sant, fòmilasyon ak teknik distribisyon.",
+    c1_title:"Kreye Tikomik",c1_desc:"Atizay ak teknik pou fè pafen pèsonèl. Melanj sant, flakon ak maketing.",
+    c2_title:"Kreye Aplikasyon",c2_desc:"Kreye premye aplikasyon mobil ou. Depi nan zero jiska piblikasyon sou Play Store.",
+    c3_title:"Fè Savon Natirèl",c3_desc:"Teknik pou fè bon jan savon natirèl lakay ou. Fòmil, pakaj ak lavant.",
+    c4_title:"Lwil Cheve Natirèl",c4_desc:"Kreye lwil cheve espesyal ak plant lokal pou kwasans ak swen cheve.",
+    c5_title:"Krèm Po",c5_desc:"Fòmil krèm kò ak po natirèl. Engredyan, bon melanj ak sekirite pou po.",
+    c6_title:"Kreye Pafen",c6_desc:"Atizay ak teknik pou fè pafen pèsonèl. Melanj sant, flakon ak maketing.",
     enroll:"Enskri",
-    builder_tag:"🌐 Kreyasyon Site Web",builder_title:"Kreye Sit Entènèt Ou",builder_sub:"Chwazi plan ideyal ou a epi kòmanse devlope sit entènèt ou an kèk minit avèk platfòm Carrd la.",
+    builder_tag:"🌐 Kreyasyon Site Web",builder_title:"Kreye Sit Ou Jodi a",builder_sub:"Chwazi yon plan pwofesyonèl epi kòmanse sit entènèt ou an kèk minit ak Carrd Pro.",
     plan_lite_name:"Plan Limite",plan_pro_name:"Plan Pro",recommended:"⭐ Rekòmande",
-    pl1:"Kreye jiska 9 sit",pl2:"2 sit bonis gratis nèt",pl3:"Sipò teknik debaz",pl4:"Modèl estanda pèsonalize",pl5:"Sit san limit",pl6:"Kreye pou tout tan",
-    pp1:"Sit ilimite nèt",pp2:"Kreye pou tout tan",pp3:"Sipò prioritè 24/7",pp4:"Tout modèl prim disponib",pp5:"Domèn pèsonèl pwofesyonèl",pp6:"Sistèm estatistik avanse",
-    choose_plan:"Chwazi Plan sa",go_carrd:"Kòmanse Kreye sou Carrd",carrd_note:"Touswit apre peman ou fin konfime, n'ap voye tout lyen ak zouti nesesè yo ba ou dirèkteman.",
-    support_tag:"💬 Sipò & Kontak",support_title:"Nou Toujou La Pou Ou",support_sub:"Ekri nou, kontakte jesyon santral la oswa diskite ak ekip sipò a dirèkteman.",
-    ceo_title:"Kontakte PDG a",staff_title:"Pale ak Ekip la",
-    hours_title:"Orè Sipò Teknik",hours_text:"Lendi – Vandredi: 8:00 AM – 8:00 PM<br>Samdi: 9:00 AM – 5:00 PM<br>Dimanch: Fèmen",
-    form_title:"✉️ Voye Yon Mesaj",s1_q:"Ki sijè prensipal mesaj ou a?",
-    s1_shop:"🛍 Pwoblèm Shop / Kòmand",s1_course:"🎓 Kous Anliy",s1_builder:"🌐 Kreyasyon Site Web",s1_other:"💬 Lòt Sijè Siplemantè",
-    s2_q:"Ki kalite detay oswa difikilte ou rankontre?",s2_pay:"💳 Pwoblèm peman / Transfè",
-    s2_delivery:"📦 Livrezon / Aksè nan sèvis",s2_info:"ℹ️ Demann enfòmasyon jeneral",s2_bug:"🐛 Erè oswa Bug sou sit la",
-    s3_q:"Konfime enfòmasyon ou yo:",f_name:"Non Ranpli",f_email:"Adrès Imel",f_msg:"Mesaj Detaye",
-    btn_next:"Kontinye →",btn_send:"📨 Voye sou WhatsApp",success_title:"Mesaj Prepare!",
-    success_text:"Nou pral redirije w sou WhatsApp pou voye mesaj la bay sipò teknik nou an kounye a.",
-    total:"Total Pou Peye:",confirm_order:"Voye Kòmand lan sou WhatsApp",footer_rights:"Tout dwa rezève."
+    pl1:"Kreye jiska 9 sit",pl2:"2 sit bonis gratis",pl3:"Sipò teknik debaz",pl4:"Modèl pèsonalize",pl5:"Sit ilimite",pl6:"Kreye pou tout tan",
+    pp1:"Sit ilimite",pp2:"Kreye pou tout tan",pp3:"Sipò prioritè 24/7",pp4:"Tout modèl ak widgets disponib",pp5:"Domèn pèsonèl (.com, .net)",pp6:"Estatistik avanse Google Analytics",
+    choose_plan:"Chwazi Plan sa",go_carrd:"Kòmanse Kreye sou Carrd",carrd_note:"Germain Tech ap voye tout zouti ak lyen yo ban ou dirèkteman apre peman.",
+    support_tag:"💬 Sipò & Kontak",support_title:"Nou La Pou Ou",support_sub:"Ekri nou yon mesaj rapid, kontakte PDG a, oswa pale ak ekip la dirèkteman sou WhatsApp.",
+    ceo_title:"Kontakte PDG a",staff_title:"Pale ak Staff la",
+    hours_title:"Orè Sipò G-Legacy",hours_text:"Lendi – Vandredi: 8am – 8pm<br>Samdi: 9am – 5pm<br>Dimanch: Fèmé",
+    form_title:"✉️ Ekri Yon Mesaj",s1_q:"Ki sijè mesaj ou a?",s2_q:"Ki kalite pwoblèm ou genyen?",s3_q:"Ekri detay yo:",f_name:"Non Ou",f_email:"Imel ou",f_msg:"Mesaj Ou",
+    btn_next:"Kontinye →",btn_send:"📨 Voye Mesaj la",
+    success_title:"Mesaj Resevwa!",success_text:"Mèsi. N'ap reponn ou nan mwens pase 24 èdtan sou WhatsApp oswa Imel.",
+    total:"Total:",footer_rights:"Tout dwa rezève. Germain Tech."
   },
   fr:{
-    nav_home:"Accueil",nav_shop:"Boutique",nav_courses:"Cours",nav_builder:"Création Site",nav_support:"Support",
-    hero_tag:"✦ Plateforme Numéro 1 en Haïti",
-    hero_h1:'Germain Tech. <span>Créer. Vendre.</span>',
-    hero_sub:"Boutique professionnelle, cours en ligne et création de sites web — G-Legacy vous apporte des solutions concrètes.",
-    hero_cta1:"Explorer la Boutique",hero_cta2:"Voir les Cours",
-    shop_tag:"🛍 Boutique",shop_title:"Nos Produits & Sèvis",shop_sub:"Canaux WhatsApp pour votre business et visibilité professionnelle sur vos réseaux sociaux.",
-    tab_wha:"💬 Canaux WhatsApp",tab_vis:"📈 Visibilité Sociale",
-    wha1_title:"Canal Basic",wha1_desc:"Lien WhatsApp personnel pour votre entreprise. Vos clients vous contactent directement sans intermédiaire.",
-    wha2_title:"Canal Pro",wha2_desc:"Canal WhatsApp avancé avec boutons personnalisés, messages automatiques et configuration premium.",
-    wha3_title:"Canal Business Pack",wha3_desc:"Kit complet : 3 canaux WhatsApp professionnels + catalogue produits intégré + système sécurisé.",
-    buy_now:"Acheter Maintenant",
-    tiktok_desc:"Boostez vos abonnés, vues et engagement réel sur votre compte TikTok rapidement.",
-    fb_desc:"Votre page business touchera plus de personnes avec des interactions professionnelles ciblées.",
-    yt_desc:"Développez votre chaîne rapidement avec des abonnements organiques et des vues authentiques.",
-    ig_desc:"Plus d'abonnés, de likes et de vues professionnelles pour bâtir une autorité solide sur Instagram.",
-    courses_tag:"🎓 Cours en Ligne",courses_title:"Apprendre. Créer. Réussir.",courses_sub:"Des cours d'experts complets pour acquérir de nouvelles compétences et générer des revenus.",
-    tag_creative:"Créatif",tag_tech:"Technologie",tag_beauty:"Beauté Naturelle",
-    c1_title:"Créer des BD/Comics",c1_desc:"Apprenez à créer des bandes dessinées professionnelles : personnages, scénario, colorisation et édition.",
-    c2_title:"Créer des Applications",c2_desc:"Développez votre première application mobile. De zéro jusqu'à la publication officielle sur le Google Play Store.",
-    c3_title:"Faire des Savons Naturels",c3_desc:"Techniques de fabrication de savons artisanaux. Formulation, emballage et stratégies de vente sur le marché.",
-    c4_title:"Huiles Capillaires Naturelles",c4_desc:"Créez vos huiles de soin avec des plantes locales. Secrets de fabrication, soins et marketing pour votre marque.",
-    c5_title:"Crèmes pour la Peau",c5_desc:"Formulation de crèmes corporelles naturelles. Comprendre les ingrédients, mélanges et bénéfices cutanés.",
-    c6_title:"Créer des Parfums",c6_desc:"Art et techniques de création de parfums personnalisés. Association des notes, formulation et distribution.",
+    nav_shop:"Boutique",nav_courses:"Cours",nav_builder:"Création Site",nav_support:"Support",
+    hero_tag:"✦ Plateforme N°1 en Haïti",
+    hero_h1:'Créez. <span>Vendez. Grandissez.</span>',
+    hero_sub:"Boutique, cours en ligne et outils de création — avec Germain Tech.",
+    hero_cta1:"Boutique",hero_cta2:"Voir les Cours",
+    shop_tag:"🛍 Boutique",shop_title:"Nos Produits & Services",shop_sub:"Liens WhatsApp et visibilité réseaux sociaux.",
+    tab_wha:"💬 Liens WhatsApp",tab_vis:"📈 Visibilité Sociale",
+    buy_now:"Acheter",
     enroll:"S'inscrire",
-    builder_tag:"🌐 Création de Sites",builder_title:"Créez votre Site Web Aujourd'hui",builder_sub:"Choisissez votre plan idéal et commencez à concevoir votre site en quelques minutes avec la puissance de Carrd.",
-    plan_lite_name:"Plan Limité",plan_pro_name:"Plan Pro",recommended:"⭐ Recommandé",
-    pl1:"Jusqu'à 9 sites web",pl2:"2 sites bonus offerts",pl3:"Support technique de base",pl4:"Modèles standards personnalisables",pl5:"Sites illimités",pl6:"Accès à vie",
-    pp1:"Sites totalement illimités",pp2:"Accès et création à vie",pp3:"Support prioritaire 24/7",pp4:"Tous les modèles premium",pp5:"Domaine personnalisé inclus",pp6:"Statistiques avancées intégrées",
-    choose_plan:"Choisir ce Plan",go_carrd:"Commencer à créer sur Carrd",carrd_note:"Dès la confirmation de votre paiement, nous vous enverrons tous les accès et outils requis directement.",
-    support_tag:"💬 Support & Contact",support_title:"Nous sommes là pour vous",support_sub:"Écrivez-nous, contactez la direction générale ou discutez directement avec l'équipe de support.",
-    ceo_title:"Contacter le PDG",staff_title:"Parler à l'Équipe",
-    hours_title:"Horaires du Support",hours_text:"Lundi – Vendredi: 8:00 AM – 8:00 PM<br>Samedi: 9:00 AM – 5:00 PM<br>Dimanche: Fermé",
-    form_title:"✉️ Envoyer un Message",s1_q:"Quel est le sujet principal de votre message ?",
-    s1_shop:"🛍 Problème Boutique / Commande",s1_course:"🎓 Cours en Ligne",s1_builder:"🌐 Création de Sites Web",s1_other:"💬 Autre Sujet Supplémentaire",
-    s2_q:"Quel type de difficulté rencontrez-vous ?",s2_pay:"💳 Problème de paiement / Transfert",
-    s2_delivery:"📦 Livraison / Accès au service",s2_info:"ℹ️ Demande d'informations générales",s2_bug:"🐛 Erreur ou Bug sur le site",
-    s3_q:"Confirmez vos informations :",f_name:"Nom Complet",f_email:"Adresse Email",f_msg:"Message Détaillé",
-    btn_next:"Continuer →",btn_send:"📨 Envoyer sur WhatsApp",success_title:"Message Préparé !",
-    success_text:"Nous vous redirigeons vers WhatsApp pour envoyer votre message directement au support.",
-    total:"Total à Payer :",confirm_order:"Envoyer la Commande sur WhatsApp",footer_rights:"Tous droits réservés."
+    choose_plan:"Choisir ce Plan",go_carrd:"Créer sur Carrd",
+    total:"Total:",footer_rights:"Tous droits réservés. Germain Tech."
   },
   en:{
-    nav_home:"Home",nav_shop:"Shop",nav_courses:"Courses",nav_builder:"Site Builder",nav_support:"Support",
-    hero_tag:"✦ Number 1 Platform in Haiti",
-    hero_h1:'Germain Tech. <span>Create. Sell.</span>',
-    hero_sub:"Professional shop, online courses, and custom website creation — G-Legacy brings tailored solutions to your business.",
-    hero_cta1:"Explore the Shop",hero_cta2:"View Courses",
-    shop_tag:"🛍 Shop",shop_title:"Our Products & Services",shop_sub:"WhatsApp channels for your business and professional social media growth packages.",
-    tab_wha:"💬 WhatsApp Channels",tab_vis:"📈 Social Visibility",
-    wha1_title:"Basic Channel",wha1_desc:"Personal WhatsApp link for your business. Customers can chat with you directly and easily.",
-    wha2_title:"Pro Channel",wha2_desc:"Advanced WhatsApp channel with custom interactive buttons, automated greeting messages, and premium look.",
-    wha3_title:"Business Pack",wha3_desc:"Full kit: 3 professional WhatsApp channels + integrated product catalog + secured structural setup.",
+    nav_shop:"Shop",nav_courses:"Courses",nav_builder:"Site Builder",nav_support:"Support",
+    hero_tag:"✦ Haiti's #1 Platform",
+    hero_h1:'Create. <span>Sell. Grow.</span>',
+    hero_sub:"Shop, online courses, and creation tools by Germain Tech.",
+    hero_cta1:"Explore Shop",hero_cta2:"Browse Courses",
+    shop_tag:"🛍 Shop",shop_title:"Our Products",shop_sub:"WhatsApp links and social media growth.",
+    tab_wha:"💬 WhatsApp Links",tab_vis:"📈 Social Visibility",
     buy_now:"Buy Now",
-    tiktok_desc:"Quickly boost your real followers, video views, and high organic engagement on TikTok.",
-    fb_desc:"Your business page will reach a broader audience with high-quality and safe interactions.",
-    yt_desc:"Expand your channel rapidly with trusted organic subscribers and high retention authentic views.",
-    ig_desc:"Get more followers, post likes, and targeted video views to build powerful authority on Instagram.",
-    courses_tag:"🎓 Online Courses",courses_title:"Learn. Create. Succeed.",courses_sub:"In-depth masterclasses designed by specialists to help you build skills and start making real revenue.",
-    tag_creative:"Creative",tag_tech:"Technology",tag_beauty:"Natural Beauty",
-    c1_title:"Comic Creation",c1_desc:"Learn to draw professional comics: character sheets, script writing, digital coloring, and self-publishing.",
-    c2_title:"App Development",c2_desc:"Build your very first custom mobile application from scratch and publish it safely on the Google Play Store.",
-    c3_title:"Natural Soapmaking",c3_desc:"Advanced techniques for home soapmaking. Formulations, beautiful packaging, and retail market positioning strategies.",
-    c4_title:"Natural Hair Oils",c4_desc:"Formulate custom hair growth oils using local roots and plants. Manufacturing secrets and e-commerce launch advice.",
-    c5_title:"Skin Creams",c5_desc:"Natural body and face cream formulation. Master cosmetic ingredients, textures, and custom skin type targeting.",
-    c6_title:"Perfume Design",c6_desc:"The art and science of custom perfume making. Fragrance notes blending, safety guidelines, and brand packaging.",
-    enroll:"Enroll Now",
-    builder_tag:"🌐 Website Builder",builder_title:"Build Your Website Today",builder_sub:"Choose the best strategic plan and launch your highly optimized professional landing page in minutes using Carrd.",
-    plan_lite_name:"Lite Plan",plan_pro_name:"Pro Plan",recommended:"⭐ Recommended",
-    pl1:"Build up to 9 websites",pl2:"2 extra bonus sites included",pl3:"Standard technical support",pl4:"Fully customizable templates",pl5:"Unlimited websites option",pl6:"Lifetime access",
-    pp1:"Completely unlimited websites",pp2:"Lifetime access and builds",pp3:"24/7 Priority VIP support",pp4:"Unlock all premium themes",pp5:"Custom domain connection",pp6:"Advanced built-in web analytics",
-    choose_plan:"Choose This Plan",go_carrd:"Start Building on Carrd",carrd_note:"Right after your payment is cleared, we will instantly send all your links, themes, and configuration guides.",
-    support_tag:"💬 Support & Contact",support_title:"We Are Always Here",support_sub:"Send us an official message, contact our main CEO dashboard, or speak to a live support rep instantly.",
-    ceo_title:"Contact CEO",staff_title:"Talk to Team Support",
-    hours_title:"Support Operational Hours",hours_text:"Monday – Friday: 8:00 AM – 8:00 PM<br>Saturday: 9:00 AM – 5:00 PM<br>Sunday: Closed",
-    form_title:"✉️ Send a Message",s1_q:"What is the primary topic of your message?",
-    s1_shop:"🛍 Shop / Order Inquiry",s1_course:"🎓 Online Courses Help",s1_builder:"🌐 Website Creation Request",s1_other:"💬 Other General Topic",
-    s2_q:"What specific category fits your issue?",s2_pay:"💳 Payment / Cash Transfer Issue",
-    s2_delivery:"📦 Service Delivery / Access Issue",s2_info:"ℹ️ General Informational Request",s2_bug:"🐛 Bug report / UI Error on platform",
-    s3_q:"Verify your contact information:",f_name:"Full Name",f_email:"Email Address",f_msg:"Detailed Message",
-    btn_next:"Continue →",btn_send:"📨 Send via WhatsApp",success_title:"Message Ready!",
-    success_text:"We will now open WhatsApp to transmit your structured ticket directly to our helpline.",
-    total:"Total Price:",confirm_order:"Submit Order via WhatsApp",footer_rights:"All rights reserved."
+    enroll:"Enroll",
+    choose_plan:"Choose Plan",go_carrd:"Start on Carrd",
+    total:"Total:",footer_rights:"All rights reserved. Germain Tech."
   }
 };
 
-// Language setup configuration
+let currentLang = 'ht';
+let selectedCategory = '';
+let selectedProblem = '';
+let currentModalProduct = '';
+let currentModalPrice = '';
+
 function setLang(lang){
   currentLang = lang;
   document.getElementById('lang-screen').style.display = 'none';
-  const main = document.getElementById('main-site');
-  main.classList.add('show');
-  
-  // Apply text updates throughout elements
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if(T[lang] && T[lang][key]){
-      if(key === 'hero_h1' || key === 'hours_text'){
-        el.innerHTML = T[lang][key];
-      } else {
-        el.textContent = T[lang][key];
-      }
-    }
-  });
-  window.scrollTo(0,0);
+  const ms = document.getElementById('main-site');
+  ms.classList.add('show');
+  applyTranslations();
 }
 
 function resetLang(){
-  document.getElementById('main-site').classList.remove('show');
   document.getElementById('lang-screen').style.display = 'flex';
+  document.getElementById('main-site').classList.remove('show');
 }
 
-// Interface Nav Handling
-function toggleMobileNav(){ document.getElementById('mobileNav').classList.toggle('open'); }
-function closeMobileNav(){ document.getElementById('mobileNav').classList.remove('open'); }
+function applyTranslations(){
+  const t = T[currentLang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(t[key] !== undefined) el.innerHTML = t[key];
+  });
+}
+
 function scrollTo(id){
-  const el = document.getElementById(id);
-  if(el){ el.scrollIntoView({behavior:'smooth'}); }
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-// Shop category switching logic
-function showShopTab(type, btn){
-  document.querySelectorAll('.shop-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  if(type === 'whatsapp'){
-    document.getElementById('tab-whatsapp').style.display = 'grid';
-    document.getElementById('tab-visibility').style.display = 'none';
-  } else {
-    document.getElementById('tab-whatsapp').style.display = 'none';
-    document.getElementById('tab-visibility').style.display = 'block';
+function toggleMobileNav(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileNav(){
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+function showShopTab(tab, el){
+  document.querySelectorAll('.shop-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-whatsapp').style.display = tab==='whatsapp'?'grid':'none';
+  document.getElementById('tab-visibility').style.display = tab==='visibility'?'grid':'none';
+}
+
+function selectOption(btn, val){
+  btn.closest('.survey-options').querySelectorAll('.survey-opt').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+  if(btn.closest('#step1')) selectedCategory = val;
+  if(btn.closest('#step2')) selectedProblem = val;
+}
+
+function nextStep(step){
+  document.querySelectorAll('.survey-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('step'+step).classList.add('active');
+  for(let i=1;i<=3;i++){
+    document.getElementById('ps'+i).classList.toggle('done', i<=step);
   }
 }
 
-// Form logic configurations
-function selectOption(btn, val, variableGroup){
-  const parent = btn.parentElement;
-  parent.querySelectorAll('.survey-opt').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-  if(variableGroup === 'cat') { selectedCategory = val; }
-  if(variableGroup === 'type') { selectedIssueType = val; }
-}
-
-function nextStep(stepNum){
-  if(stepNum === 2 && !selectedCategory){ alert("Tanpri chwazi yon sijè avan ou kontinye."); return; }
-  if(stepNum === 3 && !selectedIssueType){ alert("Tanpri chwazi yon kalite detay avan ou kontinye."); return; }
-  
-  document.querySelectorAll('.survey-step').forEach(s => s.classList.remove('active'));
-  document.getElementById('step' + stepNum).classList.add('active');
-  
-  document.getElementById('ps1').classList.add('done');
-  if(stepNum >= 2) document.getElementById('ps2').classList.add('done');
-  if(stepNum >= 3) document.getElementById('ps3').classList.add('done');
-}
-
-// Multi-step custom form handler via WhatsApp API
-function submitFormForm(){
+function submitForm(){
   const name = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const msg = document.getElementById('f-msg').value.trim();
-  
-  if(!name || !email || !msg){
-    alert("Tanpri ranpli tout chan yo kòrèkteman."); return;
+  if(!name||!email||!msg){
+    alert('Tanpri ranpli tout chan yo.');
+    return;
   }
+  const waMsg = encodeURIComponent(`📬 *Nouvo Mesaj G-Legacy*\n👤 Non: ${name}\n📧 Imel: ${email}\n📂 Sijè: ${selectedCategory}\n🔎 Pwoblèm: ${selectedProblem}\n💬 Mesaj: ${msg}`);
+  window.open(`https://wa.me/19043181164?text=${waMsg}`, '_blank');
   
-  document.getElementById('step3').classList.remove('active');
+  document.querySelectorAll('.survey-step').forEach(s=>s.style.display='none');
+  document.querySelector('.progress-bar').style.display='none';
   document.getElementById('successMsg').classList.add('show');
-  
-  // Format WhatsApp Message for Support Line
-  const whatsappNumber = "50943595335"; 
-  const text = `*Germain Tech - Nouvo Tikè Sipò*%0A%0A` +
-               `*Non Kliyan:* ${name}%0A` +
-               `*Imel:* ${email}%0A` +
-               `*Sijè:* ${selectedCategory}%0A` +
-               `*Kalite Pwoblèm:* ${selectedIssueType}%0A` +
-               `*Mesaj:* ${msg}`;
-               
-  setTimeout(() => {
-    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
-  }, 1200);
 }
 
-// Modal handling configurations
-function openModal(prodName, priceVal){
-  currentProduct = prodName;
-  currentPrice = priceVal;
+/* MODAL CONTROL VEWS */
+function openModal(product, price){
+  currentModalProduct = product;
+  currentModalPrice = price;
+  document.getElementById('modal-title').textContent = product;
+  document.getElementById('modal-price').textContent = price;
   
-  document.getElementById('modal-title').textContent = prodName;
-  document.getElementById('modal-price').textContent = priceVal;
+  // Reset Views
+  document.getElementById('info-order-view').style.display = 'block';
+  document.getElementById('natcash-checkout-view').style.display = 'none';
+  
   document.getElementById('purchaseModal').classList.add('show');
 }
 
@@ -1251,29 +1087,41 @@ function closeModal(){
   document.getElementById('purchaseModal').classList.remove('show');
 }
 
-// Order configuration directly into WhatsApp with Natcash logic
-function submitOrder(){
+function goToNatcashView(){
+  const name = document.getElementById('m-name').value.trim();
+  const email = document.getElementById('m-email').value.trim();
+  if(!name||!email){
+    alert('Tanpri ranpli non ak imel ou pou nou ka idantifye kòmand lan.');
+    return;
+  }
+  // Chanje ekran an pou montre Natcash
+  document.getElementById('info-order-view').style.display = 'none';
+  document.getElementById('natcash-checkout-view').style.display = 'block';
+}
+
+function submitOrderNatcash(){
   const name = document.getElementById('m-name').value.trim();
   const email = document.getElementById('m-email').value.trim();
   const phone = document.getElementById('m-phone').value.trim();
   
-  if(!name || !email || !phone){
-    alert("Tanpri ranpli tout enfòmasyon ou yo pou nou ka ba ou aksè."); return;
-  }
+  const waMsg = encodeURIComponent(
+    `💰 *KONFIMASYON PEMAN NATCASH*\n\n` +
+    `👤 *Kliyan:* ${name}\n` +
+    `📧 *Imel:* ${email}\n` +
+    `📱 *WhatsApp:* ${phone || 'Pa bay'}\n` +
+    `📦 *Pwodwi:* ${currentModalProduct}\n` +
+    `💵 *Lajan pou peye:* ${currentModalPrice}\n\n` +
+    `✅ Mwen sot fè transfè a sou kont 43595335 lan, tanpri aktive sèvis mwen!`
+  );
   
-  const whatsappNumber = "50934830635"; 
-  const text = `*Germain Tech - Nouvo Kòmand Pwodwi*%0A%0A` +
-               `*Pwodwi:* ${currentProduct}%0A` +
-               `*Prix:* ${currentPrice}%0A` +
-               `*Metòd Peman:* Natcash (43 59 53 35)%0A%0A` +
-               `*-- Enfòmasyon Kliyan --*%0A` +
-               `*Non:* ${name}%0A` +
-               `*Imel:* ${email}%0A` +
-               `*WhatsApp:* ${phone}`;
-               
+  // Louvri WhatsApp san paj blanch
+  window.open(`https://wa.me/19043181164?text=${waMsg}`, '_blank');
   closeModal();
-  window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
 }
+
+document.getElementById('purchaseModal').addEventListener('click', function(e){
+  if(e.target === this) closeModal();
+});
 </script>
 </body>
 </html>
